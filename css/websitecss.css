@@ -775,8 +775,6 @@ TABS
 
 
 .big_bars {
-
-
     transition: transform 0.4s linear, background-color 0.4s linear, opacity 0.3s linear;
     background-color: transparent;
     width: 120px;
@@ -788,10 +786,13 @@ TABS
     margin: 10px, 10px, 10px, 10px;
     padding: 10px, 10px, 10px, 10px;
     display:inline;
-    opacity:0.4;
+    opacity:1;
     z-index:1501;
-
 }
+.big_toggled .big_bars {
+    opacity: 0.4;
+}
+
 
 .big_bars.big_x1.big_y1{
     transform: translate(0,0);
@@ -858,31 +859,19 @@ TABS
     transform: translate(380px,380px);
 }
 
-.background_toggled {
+.background {
+    transition: opacity 0.4s linear;
+    z-index:1500;
     height:100%;
     width:100%;
-    z-index:1500;
     opacity:0.8;
     background-color:black;
     position:absolute;
-    transition: background-color 0.4s linear;
-    
 }
-
-.background {
-    transition: background-color 0.4s linear;
-    z-index:-1500;
-    height:100%;
-    width:100%;
-    position:absolute;
-}
-
-.no_bg {
+.background_toggled {
     opacity:0;
-    z-index:0;
+    pointer-events: none;
 }
-
-
 
 
 /*

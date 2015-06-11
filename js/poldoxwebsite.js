@@ -1,41 +1,67 @@
 $(document).ready(function(){
-    var $big_bars_container = $('.big_bars_container');
-    var $bars_container = $('.bars_container');
-    var $big_toggled = $('.big_toggled');
-    var $pbars_container = $('.pbars_container');
+    // Elements we're using
+    var $menu_button = $('.bars_container');
+    var $menu = $('.big_bars_container');
+    var $menu_bg = $('.background');
 
-    //Klikken in de telefoon zorgt voor menu, en dat achtergrond dan verdwijnt
+    /*******************************************
+    STATE
 
-    // Werkt niet. Waarom niet?
-    $pbars_container.click(function(){
-        $bars_container.toggleClass('toggled');
-        $big_bars_container.toggleClass('big_toggled');
-        $('.not_active').toggleClass('active');
-        $pbars_container.toggleClass('ptoggled');
-        //('.background_toggled').addClass('no_bg');
-        $('.background_toggled').css({"opacity":0});
-        $('.background_toggled').css({"z-index":-1});
-        $('.background').toggleClass('background_toggled');
+    We have one "big" variable: "state"
+
+    "state" keeps track of the current state of the application.
+
+    State means: "all information needed to represent the
+    current condition of the application"
+
+    In this case, all information we need is: is the menu open or closed?
+
+    *********************************************/
+    var state = {
+        // in this case, we only have "show_menu": true or false.
+        show_menu: false
+    };
+
+    /*
+    Now we can split the code in TWO types of functions:
+
+    1) EVENTS:
+    - On click, update the state
+
+    2) DRAW:
+    - Given a state, update the layout
+     */
+
+    // DRAW:
+    // 
+    // Given an input (state), 
+    // update the layout to reflect the current state
+    function draw(state){
+        // Hide menu:
+        if(!state.show_menu){   
+            $menu_button.addClass('toggled');
+            $menu.addClass('big_toggled');
+            $menu_bg.addClass('background_toggled');
+
+        // Show menu:
+        } else {
+            $menu_button.removeClass('toggled');
+            $menu.removeClass('big_toggled');
+            $menu_bg.removeClass('background_toggled');
+        }
+    }
+
+    // Events:
+    $menu_button.click(function(){
+        // update state
+        state.show_menu = !state.show_menu;
+        // draw layout using state.
+        draw(state);
     });
 
-    //Hoe zorg ik ervoor dat ie wel de background doet bij de kleintjes, maar niet als ik op de grote klik en dat deze dan 'goed' blijft? Iets in de css.
+    // Initialize layout with current state
+    draw(state);
 
-    // Bij het klikken op de kleintjes
-    $bars_container.click(function(){            
-        $bars_container.toggleClass('toggled');
-        $big_bars_container.toggleClass('big_toggled');
-        $('.not_active').toggleClass('active');
-        $('.background').toggleClass('background_toggled');
-        $('.background_toggled').css({"opacity":0.8});
-        $('.background_toggled').css({"z-index":1500});
-
-        $pbars_container.toggleClass('pbars_containerlight');
-        $('.littlebars_container').toggleClass('littlebars_containerlight');
-    });
-
-    $('.big_bars').click(function(){
-      $(this).css({"box-shadow":'7px 7px 5px #999 inset'});         
-    });
 
      //Klikken op de groene knop
      $('.greenbutton_hp2').click(function() { 
