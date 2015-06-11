@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+         <link rel="stylesheet" href="websitecss.css" type="text/css"/>
+    
+  <title>Poll</title>
+    
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1138.51">
+  <style type="text/css">
+      
+      
+      
+    .middlepoll {
+        position:absolute;
+        height:100%;
+        width:100%;
+        background-color:transparent;
+        z-index:-1000;
+    }
+      
+.tabs_container {
+    position:absolute;
+    top:12px;
+    left:30px;
+}
+
+      
+    .border {
+        z-index:1;
+    }
+      
+  </style>
+</head>
+<body>
+    
+<div class="border">
+<div id="left"></div>
+<div id="right"></div>
+<div id="top"></div>
+<div id="bottom"></div>
+</div>
+    
+<div class="middlepoll"></div>
+    
+    <div class="tabs_container">
+<ul id="tabs">
+    <li><a href="#" title="tab1">One</a></li>
+    <li><a href="#" title="tab2">Two</a></li>
+    <li><a href="#" title="tab3">Three</a></li>
+    <li><a href="#" title="tab4">Four</a></li>    
+</ul>
+
+<div id="content"> 
+    <div id="tab1">One - content</div>
+    <div id="tab2">Two - content</div>
+    <div id="tab3">Three - content</div>
+    <div id="tab4">Four - content</div>
+</div>
+    </div>
+    
+    
+    
+</body>
+</html>
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+    
+$(document).ready(function() {
+    $("#content div").hide(); // Initially hide all content
+    $("#tabs li:first").attr("id","current"); // Activate first tab
+    $("#content div:first").fadeIn(); // Show first tab content
+    
+    $('#tabs a').click(function(e) {
+        e.preventDefault();        
+        $("#content div").hide(); //Hide all content
+        $("#tabs li").attr("id",""); //Reset id's
+        $(this).parent().attr("id","current"); // Activate this
+        $('#' + $(this).attr('title')).fadeIn(); // Show content for current tab
+    });
+});
+</script>

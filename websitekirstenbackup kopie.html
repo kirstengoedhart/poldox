@@ -1,0 +1,823 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+     
+    <link rel="stylesheet" href="websitecss.css"  type=”text/css”/>
+    
+  <title>Kirsten's website</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1138.51">
+  
+</head>
+<body>
+    <style type="text/css">
+    
+ /* Animations */
+        
+        
+
+@keyframes zoomInLeft {
+  40% {
+    transform: scale3d(1.5, 1.5, 1.5);
+  }
+    
+60% {
+    transform: scale3d(3, 3, 3,);
+}
+    
+  100% {
+    transform: translate3d(-450px,0, 0);
+  }
+}
+
+.zoomInLeft {
+    animation: zoomInLeft 4s forwards;
+    animation-delay:0.5s; 
+}
+    
+    
+    @keyframes buttonAnimation {
+        0% {
+            opacity:0;}
+        90% {
+            opacity:0;}
+        100% {
+            opacity:1;
+            transform: translate3d(-450px,0, 0);}
+}
+        
+    .buttonAnimation {
+        animation:buttonAnimation 4s forwards;
+        animation-delay:0.5s;
+    }
+        
+        /* Kleine menu */
+        
+        .bars_container {
+            position: absolute;
+            top:  15px;
+            left: 15px;
+            width: 15px;
+            height: 15px;
+            cursor:pointer;
+            padding-top:10px;
+            animation-duration:2s;
+            animation-delay:4s;
+            z-index:1006;
+        }
+    
+        
+        .bars {
+            /* blue blocks */
+            transition: transform 0.2s linear, background-color 0.2s linear;
+            background-color: blueviolet;
+            width: 4px;
+            height: 4px;
+            position: absolute;
+        }
+        
+        .toggled .bars {
+            background-color: white;
+            
+        }
+        .bars.x1.y1{
+            transform: translate(0,0);
+        }
+        .bars.x2.y1 {
+            transform: translate(5px,0);
+        }
+        .bars.x3.y1 {
+            transform: translate(10px,0);
+        }
+        .bars.x1.y2{
+            transform: translate(0,5px);
+        }
+        .bars.x2.y2 {
+            transform: translate(5px,5px);
+        }
+        .bars.x3.y2 {
+            transform: translate(10px,5px);
+        }
+        .bars.x1.y3{
+            transform: translate(0,10px);
+        }
+        .bars.x2.y3 {
+            transform: translate(5px,10px);
+        }
+        .bars.x3.y3 {
+            transform: translate(10px,10px);
+        }
+        
+        .toggled .bars.x1.y1{
+            transform: translate(-5px,-5px);
+        }
+        .toggled .bars.x2.y1 {
+            transform: translate(5px,-5px);
+        }
+        .toggled .bars.x3.y1 {
+            transform: translate(15px,-5px);
+        }
+        .toggled .bars.x1.y2{
+            transform: translate(-5px,5px);
+        }
+        .toggled .bars.x2.y2 {
+            transform: translate(5px,5px);
+        }
+        .toggled .bars.x3.y2 {
+            transform: translate(15px,5px);
+        }
+        .toggled .bars.x1.y3{
+            transform: translate(-5px,15px);
+        }
+        .toggled .bars.x2.y3 {
+            transform: translate(5px,15px);
+        }
+        .toggled .bars.x3.y3 {
+            transform: translate(15px,15px);
+        }
+        
+
+    
+        
+        
+        
+        .menu1 {
+        color:white;
+        font-size:17px;
+        line-height: 15px;
+        text-decoration:none;
+        text-transform:uppercase;
+        font-family:"Open Sans", sans-serif;
+        cursor:pointer;
+        margin-top:-35px;
+        margin-left: 35px;
+        postion: absolute;
+        transition: transform 0.2s linear, background-color 0.2s linear font-size 0.2s linear; 
+            
+        transition-duration: 0.2s;
+        padding-top:10px;
+            animation-duration:2s;
+            animation-delay:4s;
+    
+        }
+        
+        .toggled_menu1 {
+        color:white;
+        font-size:32px;
+        text-decoration:none;
+        text-transform:uppercase;
+        font-family:"Open Sans", sans-serif;
+        cursor:pointer;
+        margin-left: 40px;
+        position:fixed absolute;
+        transition: transform 0.2s linear, background-color 0.2s linear font-size 0.2s linear;
+        transition-duration: 0.2s;
+        padding-top:10px;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /* Grote menu */
+        
+        
+        .big_bars_container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 400px;
+            margin-left: -200px;
+            margin-top:-200px;
+            background-color:transparent;
+            border-radius:10px;
+            opacity:0.5;
+            padding:10px 10px 10px 10px;
+        }
+        
+     
+        
+        .big_bars {
+            /* visible blocks */
+            transition: transform 0.4s linear, background-color 0.4s linear, opacity 0.3s linear;
+            background-color: grey;
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            border: 1px solid #CCC;
+           
+            border-radius: 23px;
+            margin: 10px, 10px, 10px, 10px;
+            padding: 10px, 10px, 10px, 10px;
+            display:inline;
+            opacity:0.5;
+            
+        }
+        
+       
+        
+.effect:hover {
+          opacity:1;
+      }
+        
+
+.big_bars:hover {
+            opacity:1;
+            box-shadow:5px 5px 10px #999;
+        }
+        
+            /* width:125px;
+            height:125px;
+            transform: translate (20px, 20px); 
+            box-shadow:5px 5px 10px #888888;
+            box-shadow: 1px 1px 5px #999;*/
+    
+      
+     
+     
+        
+        /* #bar2:hover #bar3:hover #bar4:hover #bar5:hover #bar6:hover #bar7:hover #bar8:hover #bar:hover 9 */
+    
+        
+        
+ 
+        .big_toggled .big_bars {
+            opacity:0;
+        }
+        
+        .big_toggled .big_bars a{
+            visbibility: hidden;
+        }
+        
+        .big_bars.big_x1.big_y1{
+            transform: translate(0,0);
+            background-color: red;
+        }
+        .big_bars.big_x2.big_y1 {
+            transform: translate(140px,0);
+            background-color:coral;
+        }
+        .big_bars.big_x3.big_y1 {
+            transform: translate(280px,0);
+            background-color:green;
+        }
+        .big_bars.big_x1.big_y2{
+            transform: translate(0,140px);
+            background-color:blue;
+        }
+        .big_bars.big_x2.big_y2 {
+            transform: translate(140px,140px);
+            background-color:darkorange;
+        }
+        .big_bars.big_x3.big_y2 {
+            transform: translate(280px,140px);
+            background-color:red;
+        }
+        .big_bars.big_x1.big_y3{
+            transform: translate(0,280px);
+            background-color:blueviolet;
+        }
+        .big_bars.big_x2.big_y3 {
+            transform: translate(140px,280px);
+            background-color:green;
+        }
+        .big_bars.big_x3.big_y3 {
+            transform: translate(280px,280px);
+            background-color:darkcyan;
+        }
+        
+        .big_toggled .big_bars.big_x1.big_y1{
+            transform: translate(-100px,-100px);
+        }
+        .big_toggled .big_bars.big_x2.big_y1 {
+            transform: translate(140px,-100px);
+        }
+        .big_toggled .big_bars.big_x3.big_y1 {
+            transform: translate(380px,-100px);
+        }
+        .big_toggled .big_bars.big_x1.big_y2{
+            transform: translate(-100px,140px);
+        }
+        .big_toggled .big_bars.big_x2.big_y2 {
+            transform: translate(140px,140px);
+        }
+        .big_toggled .big_bars.big_x3.big_y2 {
+            transform: translate(380px,140px);
+        }
+        .big_toggled .big_bars.big_x1.big_y3{
+            transform: translate(-100px,380px);
+        }
+        .big_toggled .big_bars.big_x2.big_y3 {
+            transform: translate(140px,380px);
+        }
+        .big_toggled .big_bars.big_x3.big_y3 {
+            transform: translate(380px,380px);
+        }
+
+   
+  
+
+
+        
+        .big_bars_container a {
+        color:white;
+        font-size: 20px;
+        text-decoration:none;
+        text-transform:uppercase;
+        text-align:center;
+        font-family:"Open Sans", sans-serif;
+        width:120px;
+        height:120px;
+        visibility: visible;
+        }
+        
+        .big_bars_container a p {
+        text-align:center;
+        margin-bottom:0px;
+        margin-top:20px;
+   
+        }
+        
+        
+        /* All the blocks have their own hover and information thing  */
+        
+        
+    
+        
+        .effect img {
+            height:50px;
+            width:50px;
+            margin-top:30px;
+            transition-delay: 0.5s;
+            transition-duration:0.3s;
+            position:relative;
+            overflow:hidden;
+        }
+    
+        
+      
+        
+    .effect .bartext {
+        font-size: 10px;
+        color:white;
+        font-family:sans-serif;
+        font-style: none;
+        overflow:hidden;
+        transition-delay:0.5s;
+        transition-duration:0.3s;
+        display:block;
+        margin-top:20px;
+        position:absolute;
+        position:relative;
+        opacity:0;
+        text-shadow: 1px 1px 1px dimgray;
+    }
+        
+        
+        .bar1:hover .bartext {
+            margin-top:10px;
+            opacity:1;
+        }
+       .bar2:hover .bartext {
+            margin-top:10px;
+            opacity:1;
+        }
+       .bar3:hover .bartext {
+            margin-top:10px;
+            opacity:1;
+        }
+       .bar4:hover .bartext {
+            margin-top:10px;
+            opacity:1;
+        }
+       .bar5:hover .bartext {
+            margin-top:10px;
+            opacity:1;
+        }
+       .bar6:hover .bartext {
+            margin-top:10px;
+            opacity:1;
+        }
+       .bar7:hover .bartext {
+            margin-top:10px;
+            opacity:1;
+        }
+       .bar8:hover .bartext {
+            margin-top:10px;
+            opacity:1;
+        }
+      .bar9:hover .bartext {
+            margin-top:10px;
+            opacity:1;
+        }
+     
+        
+     .phonebar {
+            background-color:black;
+            width:100%;
+            height:50px;
+            position:fixed absolute;
+            top:0;
+            z-index:-1;
+        }
+    
+    .phonebar_content {
+        float:left;
+        margin: 5px;
+        z-index:0;
+    }
+        
+    
+        
+        /* Het beginscherm - Zet de telefoon aan! */
+   
+   .beforemenu {
+       background-color:black;
+       height:100%;
+       width:100%;
+       z-index:1000;
+       position: absolute;
+   }    
+        
+        
+    
+        
+        /* ringing phone! */
+
+    
+@keyframes ringing {
+    0% {transform: rotate(0);}
+    60% {transform:rotate(0);}
+    65% {transform:rotate(10deg);}
+    70% {transform:rotate(-20deg);}
+    75% {transform:rotate(20deg);}
+    80% {transform:rotate(-20deg);}
+    85% {transform:rotate(20deg);}
+    90% {transform:rotate(-20deg);}
+    95% {transform:rotate(20deg);}
+    100% {transform:rotate(-10deg);}
+ 
+}
+    
+        
+    .ringing_phone {
+        height:200px;
+        width:200px;
+        z-index:1001;
+        top:70%;
+        left:60%;
+        position:absolute;
+        animation-name:ringing;
+        animation-duration:1s;
+        animation-iteration-count: 10;
+    }
+        
+    .phoneright {
+        height:800px;;
+        width:400px;
+        right:100px;
+        left:500px;
+        margin-left:500px;
+        position:absolute;
+       float:clear;
+        
+    }
+        
+        /* These are changeable real easy. Background of the body and stuff, still needs to be decided upn */
+        
+        
+    body {
+           background-color:white;
+       }
+        
+/* Voor als er een video in kan
+    #bgvid {
+    position:fixed;
+    top:50%;
+    left:50%;
+    min-width:100%;
+    min-height:100%;
+    width:auto;
+    height:auto;
+    z-index:-100;
+    webkit-transform:translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background:url(da%20vinci%20grijs.jpeg) no-repeat;
+    background-size:cover;
+} */
+        
+    .phoneframe {
+        left:50%;
+        margin-left:-105px;
+        z-index:1002;
+        position:absolute;
+        top:150px;   
+    }
+    
+    .phonescreen_toggled{
+        left:50%;
+        margin-left:-545px;
+        z-index:1000;
+        position:absolute;
+        top:200px;
+        width:260px;
+        height:450px;
+        background-color:lightgrey;
+        transition-delay:6s;
+        transition-property opacity:1;
+    }
+    
+        .phonescreen {
+            transition-property opacity:0;
+             transtion-duration:2s;
+            transition-delay:6s;
+        }
+        
+        
+    .redbutton {
+        position:absolute;
+        height:47px;
+        width:47px;
+        background-color:red;
+        z-index:1003;
+        left:50%;
+        margin-left:9px;
+        margin-top:617px;
+        border-radius:50%;
+        cursor:pointer;
+    }
+    
+    .greenbutton {
+        position:absolute;
+        height:47px;
+        width:47px;
+        background-color:limegreen;
+        z-index:1003;
+        left:50%;
+        margin-left:9px;
+        margin-top:617px;
+        border-radius:50%;
+        cursor:pointer;
+    }
+    
+        .hide {
+            transition-property opacity:0;
+            transition-delay:6s;
+            transition-duration:2s;
+        }
+        
+        .show {
+            transition-delay:6s;
+            transition-duration:2s;
+            transition-property opacity:1;
+            z-index:1005;
+        }
+        
+    </style>
+    
+    
+    <div class="background"></div>
+    
+    <div class="phonebar"> </div>
+    <div class="phonebar_content"></div>
+   <div class="beforemenu"></div>
+    
+    <!---
+    <div class="beforemenu"></div>
+    <div class="ringing_phone"> <img src="wolkje.png"> </div>
+ <div class="phoneright">
+        <img src="hoesjetel.png"/></div>
+    --->
+    
+    <div class="menu1">
+    <p>Menu</p></div>  
+    
+    <div class="beforemenu">
+<div class="phoneframe">
+        <img src="phoneframezelf.png"></div>
+    <div class="redbutton phonebutton"></div>
+    <div class="phonescreen"></div>
+    </div>
+    
+
+    <div class="bars_container">
+        <div class="bars x1 y1"></div>
+        <div class="bars x2 y1"></div>
+        <div class="bars x3 y1"></div>
+        <div class="bars x1 y2"></div>
+        <div class="bars x2 y2"></div>
+        <div class="bars x3 y2"></div>
+        <div class="bars x1 y3"></div>
+        <div class="bars x2 y3"></div>
+        <div class="bars x3 y3"></div>    
+    </div>
+    
+    
+    <!--- <div class="ringing_phone"> <img src="wolkje.png"/></div>
+    <div class="beforemenu"></div> --->
+
+  
+   
+
+    
+     <div class="big_bars_container effect ">
+      
+    <a href="#">
+        <div class="big_bars big_x1 big_y1 bar1">
+            <img id="film" src="filmvierkant.png"/>
+            <p class="bartext 1"> Documentaire </p>
+            </div></a>
+         
+        <a href="#">
+            <div class="big_bars big_x2 big_y1 bar2">
+                <img id="theorie" src="boekenzelf.png"/>
+                <p class="bartext 2">Theorie</p>
+            </div></a>
+         
+        <a href="#">
+            <div class="big_bars big_x3 big_y1 bar3">
+                <img id="poll" src="poll.png"/>
+                <p class="bartext 3"> Onderzoek </p>
+           </div></a>
+         
+         <a href="#">
+        <div class="big_bars big_x1 big_y2 bar4">
+            <img src="datanietdoorzichtig.png"/>
+            <p class="bartext 4"> Data </p>
+            </div></a>
+         
+         <a href="#">
+            <div class="big_bars big_x2 big_y2 bar5">
+                <img/>
+            <p class="bartext 5"> Documentaire 'titel' </p>
+                </div></a>
+         
+         <a href="#">
+            <div class="big_bars big_x3 big_y2 bar6">
+                <img src="bronnenicon.png"/>
+                <p class="bartext 6"> Bronnen </p>
+               </div> </a>
+         
+         <a href="#">
+            <div class="big_bars big_x1 big_y3 bar7">
+                <img id="deel" src="facebook%20logo2.png"/>
+                <p class="bartext 7"> Like deze pagina </p>
+           </div> </a>
+         
+         <a href="#">
+             <div id="bar8" class="big_bars big_x2 big_y3 bar8">
+                 <img src="homeicon.png"/>
+                 <p class="bartext 8"> Homepage</p>
+             </div></a>
+         
+         <a href="#">
+            <div class="big_bars big_x3 big_y3 bar9">
+                <img src="wolkje.png"/>
+                <p class="bartext 9"> Contact</p>
+             </div> </a>   
+    </div>
+    
+
+    
+    
+    
+    
+ 
+    
+    
+    
+    
+    
+    
+     <!--- Menu dat verschijnt --->
+    <!--
+  <div class="menu1">
+      <ul>
+          <li><a href="#"> Home </a></li>
+          <li><a href="#"> Wie zijn wij? </a></li>
+          <li><a href="#"> Documentaire </a></li>
+          <li><a href="#"> Contact </a></li>
+      </ul>
+
+    </div>
+    
+    <!--- De achtergrond, het geraamte --->
+    <!---
+    <div class= "plaatjeachtergrond">
+        
+        <div class="menu-icoon">
+            <i class="barretjes">
+            Menu</i>
+        </div>
+    </div>
+    
+
+        var bigContainerIsShowed = true;
+        
+        var $bars_container = $('.bars_container');
+        $bars_container.click(function(){
+            $bars_container.toggleClass('toggled');
+            if(bigContainerIsShowed){
+            else
+            hideBigContainer();
+        });
+        
+        var $big_bars_container = $('.big_bars_container');
+        $big_bars_container.click(function(){
+            hideBigContainer();
+        });
+        
+    function hideBigContainer(){
+    $big_bars_container.toggleClass('big_toggled');
+            $big_bars_container.hide();
+        bigContainerIsShowed = false;
+    };
+        
+$('.ringing_phone').click(function(event) {  
+    if($(event.target).hasClass("big_toggled")) {
+        $('.beforemenu').show();
+    } else {
+        $('.beforemenu').fadeOut(2000);
+    }
+});
+
+var $ringing_phone = $('.ringing_phone');
+
+ var $background = $('.background');
+    $background.toggleClass('background_toggled');
+        
+ --->   
+    
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script>
+        
+        var $big_bars_container = $('.big_bars_container');
+        var $bars_container = $('.bars_container');
+        var $big_toggled = $('.big_toggled');
+       
+        
+     
+   
+            $bars_container.click(function(){
+            $bars_container.toggleClass('toggled');
+            $big_bars_container.toggleClass('big_toggled');
+            $menu1.toggleClass('toggled_menu1');
+    
+        
+        });
+        
+        
+        $('.phonebutton').click(function(event) {  
+    if($(event.target).hasClass('big_toggled')) {
+        $('.beforemenu').show();
+    } else {
+        $('.beforemenu').fadeOut(2000);
+    };
+});
+      
+        
+        var $menu1 = $('.menu1');
+        $menu1.click(function(){
+            
+            $bars_container.toggleClass('toggled');
+            $big_bars_container.toggleClass('big_toggled');
+            $menu1.toggleClass('toggled_menu1');
+           
+        });
+        
+        $('.redbutton').click(function(){
+            $('.redbutton').toggleClass('greenbutton');
+            $('.phoneframe').addClass('zoomInLeft');
+            $('.greenbutton').addClass('buttonAnimation');
+ $('.phonescreen').toggleClass('phonescreen_toggled');
+
+        });
+        
+        
+       $(".big_bars").click(function(){
+  $(this).css({"box-shadow":"7px 7px 5px #999 inset"});         
+    
+});
+        
+        
+        
+
+       
+        
+    </script>
+    
+   <!--- 
+
+    
+    <script src=”bootstrap/js/bootstrap.js”>
+</script>   
+</body>
+</html>
+--->
