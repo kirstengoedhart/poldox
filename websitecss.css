@@ -1,13 +1,8 @@
-
-        /* 
-
+/* 
 --------------------
         Animations
 --------------------
-        
 */
-
-
 @keyframes zoomInLeft {
     0% {
         opacity:1;
@@ -24,7 +19,6 @@
         visibility:hidden;
     }
 }
-
 
 .zoomInLeft {
     animation: zoomInLeft 4s none;
@@ -63,146 +57,137 @@
     }
 }
 
+.fadeInAnimation {
+    animation:fadeInAnimation forwards;
+    animation-duration:2s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeOutAnimation {
+    0% {
+        opacity:1;
+        transform: translate3d(0,0,0);
+    }
+
+    100% {
+        opacity:0;
+        transform: translate3d(0 ,0, 0);
+    }
+}
+
+.fadeOutAnimation {
+    animation:fadeOutAnimation forwards;
+    animation-duration:2s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeInDelayAnimation {
+    0% {
+        opacity:0;
+        transform: translate3d(0,0,0);
+    }
+
+    100% {
+        opacity:1;
+        transform: translate3d(0 ,0, 0);
+    }
+}
+
+.fadeInDelayAnimation {
+    animation:fadeInDelayAnimation forwards;
+    animationdelay:3s;
+    animation-duration:2s;
+    animation-fill-mode: both;
+}
 
 
-                .fadeInAnimation {
-                    animation:fadeInAnimation forwards;
-                    animation-duration:2s;
-                    animation-fill-mode: both;
-                }
+@keyframes animationphoneleft {
+    0% {
+        transform: translate3d(-100%, 0, 0);
+        opacity:0;
+    }
 
+    100% {
+        transform: translate3d (0, 0, 0);
+        opacity:0.8;
 
+    }
+}
 
-                @keyframes fadeOutAnimation {
-                    0% {
-                        opacity:1;
-                        transform: translate3d(0,0,0)}
+.animationphoneleft {
+    animation:animationphoneleft ease-in-out;
+    animation-duration:2s;
+    animation-delay:1s;
+    animation-fill-mode: both;
+}
 
-                        100% {
-                            opacity:0;
-                            transform: translate3d(0 ,0, 0);}
-                        }
+@keyframes animationphoneleft_hp {
+    0% {
+        transform: translate3d(-100%, 0, 0);
+        opacity:0;
+    }
 
+    100% {
+        transform: translate3d (0, 0, 0);
+        opacity:0.8;
 
+    }
+}
 
-                        .fadeOutAnimation {
-                            animation:fadeOutAnimation forwards;
-                            animation-duration:2s;
-                            animation-fill-mode: both;
-                        }
+.animationphoneleft_hp {
+    animation:animationphoneleft ease-in-out;
+    animation-duration:2s;
+    animation-delay:2.5s;
+    animation-fill-mode: both;
+}
 
-                        @keyframes fadeInDelayAnimation {
-                            0% {
-                                opacity:0;
-                                transform: translate3d(0,0,0)}
+@keyframes colorAnimation {
+    0% {
+        background-color:black;
+    }
+    20% {
+        background-color:blueviolet;
+    }
+    60% {
+        background-color:black;
+    }
+    80% {
+        background-color:blueviolet;
+    }
+    100% {
+        background-color:black;
+    }
+}
 
-                                100% {
-                                    opacity:1;
-                                    transform: translate3d(0 ,0, 0);}
-                                }
+.colorAnimation {
+    animation:colorAnimation forwards;
+    animation-duration:4s;
+    animation-fill-mode: both;
+}
 
+@keyframes colorAnimation2 {
+    0% {
+        background-color:blueviolet;
+    }
+    20% {
+        background-color:black;
+    }
+    60% {
+        background-color:blueviolet;
+    }
+    80% {
+        background-color:black;
+    }
+    100% {
+        background-color:blueviolet;
+    }
+}
 
-
-                                .fadeInDelayAnimation {
-                                    animation:fadeInDelayAnimation forwards;
-                                    animationdelay:3s;
-                                    animation-duration:2s;
-                                    animation-fill-mode: both;
-                                }
-
-
-                                @keyframes animationphoneleft {
-                                    0% {
-                                        transform: translate3d(-100%, 0, 0);
-                                        opacity:0;
-                                    }
-
-                                    100% {
-                                        transform: translate3d (0, 0, 0);
-                                        opacity:0.8;
-
-                                    }
-                                }
-
-                                .animationphoneleft {
-                                    animation:animationphoneleft ease-in-out;
-                                    animation-duration:2s;
-                                    animation-delay:1s;
-                                    animation-fill-mode: both;
-                                }
-
-                                @keyframes animationphoneleft_hp {
-                                    0% {
-                                        transform: translate3d(-100%, 0, 0);
-                                        opacity:0;
-                                    }
-
-                                    100% {
-                                        transform: translate3d (0, 0, 0);
-                                        opacity:0.8;
-
-                                    }
-                                }
-
-                                .animationphoneleft_hp {
-                                    animation:animationphoneleft ease-in-out;
-                                    animation-duration:2s;
-                                    animation-delay:2.5s;
-                                    animation-fill-mode: both;
-                                }
-
-                                @keyframes colorAnimation {
-                                    0% {
-                                        background-color:black;
-                                    }
-                                    20% {
-                                        background-color:blueviolet;
-                                    }
-                                    60% {
-                                        background-color:black;
-                                    }
-                                    80% {
-                                        background-color:blueviolet;
-                                    }
-                                    100% {
-                                        background-color:black;
-                                    }
-                                }
-
-
-
-                                .colorAnimation {
-                                    animation:colorAnimation forwards;
-                                    animation-duration:4s;
-                                    animation-fill-mode: both;
-                                }
-
-
-                                @keyframes colorAnimation2 {
-                                    0% {
-                                        background-color:blueviolet;
-                                    }
-                                    20% {
-                                        background-color:black;
-                                    }
-                                    60% {
-                                        background-color:blueviolet;
-                                    }
-                                    80% {
-                                        background-color:black;
-                                    }
-                                    100% {
-                                        background-color:blueviolet;
-                                    }
-                                }
-
-
-
-                                .colorAnimation2 {
-                                    animation:colorAnimation2 forwards;
-                                    animation-duration:4s;
-                                    animation-fill-mode: both;
-                                }
+.colorAnimation2 {
+    animation:colorAnimation2 forwards;
+    animation-duration:4s;
+    animation-fill-mode: both;
+}
 
 /*
 -----------------------------------------------------------
@@ -242,7 +227,6 @@
     border-radius:20px 20px 5px 5px;
 }
 
-
 .pageup {
     height:60%;
     width:100%;
@@ -277,13 +261,10 @@
     z-index:-1;
 }
 
-
-
 .pageup.pextra, .pageup.pdocumentaire {
     background-color:white;
     
 }
-
 .pageup img {
     width:100%;
     overflow:hidden;
@@ -294,7 +275,6 @@
 /* ------------------------------------------
 WEBSITE EXTRA's
 ------------------------------------------*/
-
 .pagedown.pdocumentaire {
     background-color:white;
 }
@@ -303,19 +283,15 @@ WEBSITE EXTRA's
     background-color:white;
 }
 
-
-
 /* ------------------------------------------
 WEBSITE EXTRA's
 ------------------------------------------*/
-
-
 .container.pextra {
     height:400px;
     top:280px;
     left:50%;
     width:1000px;
-    margin-left:-470px;
+    margin-left:-515px;
     position:absolute;
     overflow:hidden;
     border-radius:30px;
@@ -323,7 +299,6 @@ WEBSITE EXTRA's
     /*#EB99FF*/
     
 }
-
 .subcontainer.pextra{
     background-color:#FBEBFF;
     border:1px solid #4D0067;
@@ -360,8 +335,6 @@ WEBSITE EXTRA's
     opacity:1;
     color:#2F1F33;
 }
-
-
 
 .subcontainer img {
     width:100%;
@@ -412,9 +385,6 @@ WEBSITE EXTRA's
     background-color:orange;
 }
 
-
-
-
 /* ------------------------------------------
 DIFFERENT COLORS FOR DIFFERENT SITES. DEFINED BY P...
 ------------------------------------------*/
@@ -435,6 +405,9 @@ body.pextra, body.pdata, body.pgeschiedenis, body.pdocumentaire, body.ptheorie, 
 }
 .topbox.pextra, .backgroundphonebar.pextra {
     border-color:#4D0067;
+}
+.backgroundphonebar.pindex {
+    border-style: none;
 }
 .backgroundphonebar.pgeschiedenis {
     border-color:#17532B;
@@ -462,11 +435,7 @@ body.pextra, body.pdata, body.pgeschiedenis, body.pdocumentaire, body.ptheorie, 
 .lightup.pcontact:hover {color:#B82593;}
 .lightup.phomepage:hover {color:darkorange;}
 
-
-
-
 /* 
-
 --------------------------
        FILMPJES
 --------------------------
@@ -475,10 +444,7 @@ iframe.pdocumentaire {
     bottom:700px;
 }
 
-
-
 /* 
-
 --------------------------
        CONTENT HOMEPAGE
 --------------------------
@@ -1398,8 +1364,12 @@ a.topbar {
     color:dimgrey;
     padding: 0 20px;
     font-style: none;
+    /* causes hover-delay. why is it here?
+       perhaps also specify the css properties to transition on?
+
     transition-delay:0.3s;
     transition-duration:0.3s;
+    */
     text-align: center;
     position:relative;
     overflow:hidden;
