@@ -309,6 +309,8 @@ WEBSITE GESCHIEDENIS
     position:absolute;
     left:0px;
     width:50%;
+    height:2600px;
+    z-index:-1;
 }
 
 .imgages.pgeschiedenis {
@@ -321,31 +323,31 @@ WEBSITE GESCHIEDENIS
  .containeryear .pgeschiedenis { /* De lijnen in de tijdlijn*/
             position:absolute;
           left:50%;
-          width:500px;
+          width:480px;
           height:20px;
           border-top:3px solid darkgreen;
+     z-index:-1;
       }
 
-.containeryear p {
-        color:#335C33;
-        font-size: 20px;
-        text-decoration:none;
-        text-transform:uppercase;
-        font-family:"Open Sans", sans-serif;
-        margin: 3px 3px 3px 3px;
-}
 
 
   .allcircles.pgeschiedenis {
           position:absolute;
           left:50%;
-          margin-left:-5px;
-          border:2px solid darkgreen;
-      border-radius:50%;
+         
+      }
+
+.circle {
+    position:absolute;
+     border:2px solid darkgreen;
+        border-radius:50%;
       background-color:white;
           height:5px;
-          width:5px;  
-      }
+          width:5px;
+     margin-left:-3px;
+    z-index:1;
+    margin-top:-11px;
+}
 
 .image.pgeschiedenis {
     width:400px;
@@ -356,59 +358,172 @@ WEBSITE GESCHIEDENIS
     background-image:contain;
     position:absolute;
     border:1px solid white;
-    border-radius:10px;
+    border-radius:20px;
+    z-index:1;
 }
 
+.pgeschiedenis.wrapper {
+      width:400px;
+    height:300px;
+    overflow:hidden;
+    border: 1px solid white;
+    box-shadow: 5px 5px 10px darkgreen;
+    background-image:contain;
+    position:absolute;
+     background-color:black;
+    border-radius:20px;
+    opacity:0;
+    z-index:2;
+    transition: opacity 0.35s linear;
+}
+
+.year.pgeschiedenis p {
+        color:#335C33;
+        font-size: 20px;
+        text-decoration:none;
+        text-transform:uppercase;
+        font-family:"Open Sans", sans-serif;
+        margin: 3px 6px 3px 6px;
+        position:absolute;
+}
+
+.image.pgeschiedenis p {
+    color:#2EB82E;
+        font-size: 15px;
+        text-decoration:none;
+        font-family:"Open Sans", sans-serif;
+        margin: 3px 6px 3px 6px;
+        position:absolute;
+    font-weight:bold;
+    text-alignment:center;
+    padding-left:40px;
+    padding-right:40px;
+    padding-top:60px;
+    opacity:0;
+}
+
+.image.pgeschiedenis:hover p {
+    opacity:1;
+}
+
+.wrapper:hover {
+opacity:0.7;
+}
+
+/* .allimages.pgeschiedenis {
+    position:absolute;
+    left:50%;
+    margin-left:-200px;
+}*/
+
+/* Plaatsing containers - lijntjes */
+#his1, .c1 {top:300px;}
+
+#his2, .c2 {top:630px;}
+
+#his3, .pgeschiedenis .c3 {top:940px;}
+
+#his4, .c4 {top:1340px;}
+
+#his5, .c5 {top:1710px;}
+
+#his6, .c6 {top:2050px;}
+
+#his7, .c7 {top:2380px;}
+
+.c8 {top:350px;}
+.c9 {top:680px;}
+.c10 {top:1010px;}
+.c11 {top:1300px;}
+.c12 {top:1770px;}
+.c13 {top:2100px;}
+
+#his8 {top:350px; margin-left:-480px;}
+
+#his9 {top:680px; margin-left:-480px;}
+
+#his10 {top:1010px; margin-left:-480px;}
+
+#his11 {top:1300px; margin-left:-480px;}
+
+#his12 {top:1770px; margin-left:-480px;}
+
+#his13 {top:2100px; margin-left:-480px;}
 
 
-
-
-
-
+p.left {
+    position:absolute;
+    padding-left:423px;
+}
 
 /* Plaatsing van plaatjes en cirkels*/
 
     #imghis1{
-    background-image:url("../img/1854.jpg");
-    top:300px;
+    background-image:url("img/1854.jpg");
+    left:200px;
+    top:150px;
+    }
+
+    #imghis8{
+    background-image:url("img/1860.jpg");
+    top:200px;
+    right:200px
     }
     #imghis2{
-    background-image:url("../img/1860.jpg");
-    top:400px;
-    }
-    #imghis3{
-    background-image:url("../img/1879.jpg");
-    top:500px;
-    }
-    #imghis4{
-    background-image:url("../img/1876.jpg");
-    }
-    #imghis5{
-    background-image:url("../img/1881.gif");
-    }
-    #imghis6{
-    background-image:url("../img/1925.jpg");
-    }
-    #imghis7{
-    background-image:url("../img/1964.jpg");
-    }
-    #imghis8{
-    background-image:url("../img/1973.jpg");
+    background-image:url("img/1879.jpg");
+    top:490px;
+    left:200px;
     }
     #imghis9{
-    background-image:url("../img/1982.jpg");
+    background-image:url("img/1876.jpg");
+    right:200px;
+    top:530px;
+    }
+    #imghis3{
+    background-image:url("img/1881.gif");
+    left:200px;
+    top:790px;
     }
     #imghis10{
-    background-image:url("../img/1992.png");
+    background-image:url("img/1925.jpg");
+    right:200px;
+    top:860px;
     }
+
     #imghis11{
-    background-image:url("../img/2000.jpg");
+    background-image:url("img/1964.jpg");
+    right:200px;
+    top:1190px;
+    }
+    #imghis4{
+    background-image:url("img/1973.jpg");
+    left:200px;
+    top:1150px
+    }
+    #imghis5{
+    background-image:url("img/IBM_Simon.jpeg");
+    left:200px;
+    top:1560px;
     }
     #imghis12{
-    background-image:url("../img/2007");
+    background-image:url("img/1982.jpg");
+    right:200px;
+    top:1520px;
+    }
+    #imghis6{
+    background-image:url("img/2000.jpg");
+    left:200px;
+    top:1900px;
     }
     #imghis13{
-    background-image:url(="../img/2010");
+    background-image:url("img/2007.jpg");
+    top:1950px;
+    right:200px;
+    }
+    #imghis7{
+    background-image:url("img/2010.jpg");
+    right:200px;
+    top:2300px;
     }
 
 /* ------------------------------------------
