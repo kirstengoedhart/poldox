@@ -2,19 +2,6 @@ var $big_bars_container = $('.big_bars_container');
 var $bars_container = $('.bars_container');
 var $big_toggled = $('.big_toggled');
 
-$bars_container.click(function(){
-    $bars_container.toggleClass('toggled');
-    $big_bars_container.toggleClass('big_toggled');
-    $('.not_active').toggleClass('active');
-    $('.phonebar_container').toggleClass('phonebar_container_toggled');
-    $('.background').toggleClass('background_toggled');
-    //$('.background_toggled').removeClass('no_bg');
-});
-
-$(".big_bars").click(function(){
-    $(this).css({"box-shadow":"7px 7px 5px #999 inset"});         
-});
-
 // FIRST BUTTON - screen turns white  
 $('.phonebutton').click(function(event) {  
     $('.beforemenu').toggleClass('beforemenu_toggled');

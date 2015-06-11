@@ -11,7 +11,7 @@
 
     80% {
         opacity:0;
-        transform:scale3d(4, 4, 4)
+        transform:scale3d(4, 4, 4);
     }
     
     100% {
