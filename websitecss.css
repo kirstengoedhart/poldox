@@ -253,6 +253,7 @@
     position:fixed;
     z-index:-1;
     right:0px;
+    border-radius:20px 20px 0px 0px;
 }
 
 .pageleft {
@@ -262,6 +263,7 @@
     position:fixed;
     z-index:-1;
     left:0px;
+    border-radius: 0px 0px 20px 20px;
 }
 
 /* ------------------------------------------
@@ -292,51 +294,118 @@ PAGE UPS/DOWNS/RIGHTS/LEFTS
 WEBSITE GESCHIEDENIS
 ------------------------------------------*/
 .pageright.pgeschiedenis, .pageleft.pgeschiedenis {
-    background-color:#338533;
+    background-color:white;
     position:fixed;
     height:100%;
     width:50%;
 }
 
-.pageright.pgeschiedenis {
-right:0px;
-border-left:1px solid white;
-}
-
-.pageleft.pgeschiedenis {
-left:0px;
-border-right:1px solid white;
+.line.pgeschiedenis {
+    border-right:3px solid darkgreen;
+    position:absolute;
+    left:0px;
+    width:50%;
 }
 
 .imgages.pgeschiedenis {
-    border:1px solid white;
-    border-radius:10px;
-    height:150px;
-    width:250px;
     position:absolute;
     overflow:hidden;
-    box-shadow: 5px 5px 7px dimgrey;
-    margin-top:-75px;
+    position:absolute;
+    top:200px;
 }
 
- .allimages .pgeschiedenis {
+ .containeryear .pgeschiedenis { /* De lijnen in de tijdlijn*/
             position:absolute;
           left:50%;
-          width:400px;
-          height:1px;
-          border-top:1px solid white;
+          width:500px;
+          height:20px;
+          border-top:3px solid darkgreen;
       }
+
+.containeryear p {
+        color:#335C33;
+        font-size: 20px;
+        text-decoration:none;
+        text-transform:uppercase;
+        font-family:"Open Sans", sans-serif;
+        margin: 3px 3px 3px 3px;
+}
+
 
   .allcircles.pgeschiedenis {
           position:absolute;
           left:50%;
           margin-left:-5px;
-          border:2px solid white;
+          border:2px solid darkgreen;
       border-radius:50%;
       background-color:white;
           height:5px;
           width:5px;  
       }
+
+.image.pgeschiedenis {
+    width:400px;
+    height:300px;
+    overflow:hidden;
+    border: 1px solid white;
+    box-shadow: 5px 5px 10px darkgreen;
+    background-image:contain;
+    position:absolute;
+    border:1px solid white;
+    border-radius:10px;
+}
+
+
+
+
+
+
+
+
+/* Plaatsing van plaatjes en cirkels*/
+
+    #imghis1{
+    background-image:url("../img/1854.jpg");
+    top:300px;
+    }
+    #imghis2{
+    background-image:url("../img/1860.jpg");
+    top:400px;
+    }
+    #imghis3{
+    background-image:url("../img/1879.jpg");
+    top:500px;
+    }
+    #imghis4{
+    background-image:url("../img/1876.jpg");
+    }
+    #imghis5{
+    background-image:url("../img/1881.gif");
+    }
+    #imghis6{
+    background-image:url("../img/1925.jpg");
+    }
+    #imghis7{
+    background-image:url("../img/1964.jpg");
+    }
+    #imghis8{
+    background-image:url("../img/1973.jpg");
+    }
+    #imghis9{
+    background-image:url("../img/1982.jpg");
+    }
+    #imghis10{
+    background-image:url("../img/1992.png");
+    }
+    #imghis11{
+    background-image:url("../img/2000.jpg");
+    }
+    #imghis12{
+    background-image:url("../img/2007");
+    }
+    #imghis13{
+    background-image:url(="../img/2010");
+    }
 
 /* ------------------------------------------
 WEBSITE DOCUMENTAIRE
@@ -760,7 +829,8 @@ TABS
 
 
 .big_bars_container {
-    position: absolute;
+    position: fixed;
+    z-index: 1501;
     top: 50%;
     left: 50%;
     width: 400px;
@@ -771,6 +841,16 @@ TABS
     border-radius:10px;
     padding:10px 10px 10px 10px;
 }
+
+.big_bars_container a {
+    pointer-events: all;
+}
+
+.big_bars_container.big_toggled a {
+    pointer-events: none;
+}
+
+
 
 
 
@@ -864,9 +944,12 @@ TABS
     z-index:1500;
     height:100%;
     width:100%;
+    margin: 0;
+    left: 0;
+    top: 0;
     opacity:0.8;
     background-color:black;
-    position:absolute;
+    position:fixed;
 }
 .background_toggled {
     opacity:0;
@@ -1005,39 +1088,7 @@ TABS
 }
 
 
-#bar1:hover .bartext {
-    margin-top:10px;
-    opacity:1;
-}
-#bar2:hover .bartext {
-    margin-top:10px;
-    opacity:1;
-}
-#bar3:hover .bartext {
-    margin-top:10px;
-    opacity:1;
-}
-#bar4:hover .bartext {
-    margin-top:10px;
-    opacity:1;
-}
-#bar5:hover .bartext {
-    margin-top:10px;
-    opacity:1;
-}
-#bar6:hover .bartext {
-    margin-top:10px;
-    opacity:1;
-}
-#bar7:hover .bartext {
-    margin-top:10px;
-    opacity:1;
-}
-#bar8:hover .bartext {
-    margin-top:10px;
-    opacity:1;
-}
-#bar9:hover .bartext {
+.big_bars:hover .bartext {
     margin-top:10px;
     opacity:1;
 }
