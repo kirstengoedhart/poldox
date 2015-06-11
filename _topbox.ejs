@@ -4,6 +4,9 @@
         <%
         var items = [
             {
+                "href":"index.html",
+                "text":"Home"
+            },{
                 "href":"Geschiedenis.html",
                 "text":"Geschiedenis"
             },{
@@ -14,7 +17,7 @@
                 "text":"Theorie"
             },{
                 "href":"Data.html",
-                "text":"Data"
+                "text":"Data en Feiten"
             },{
                 "href":"Extra.html",
                 "text":"Extra"
@@ -23,15 +26,9 @@
                 "text":"Documentaire"
             },
         ];
-        items.forEach(function(item,index){
-            index = index + 1;
-
+        items.forEach(function(item){
         %>
-        <a href="<%= item.href %>">
-            <div id="topbar<%= index %>" class="topbar border">
-                <p> <%= item.text %> </p>
-            </div>
-        </a>
+        <a class="lightup topbar pextra" href="<%= item.href %>"><%= item.text %></a>
         <% 
         });
         %>
