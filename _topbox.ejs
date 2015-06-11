@@ -1,42 +1,40 @@
 <div class="backgroundphonebar pextra"></div>
 <div class="topbox p<%= current.source.toLowerCase() %>">
     <div class="phonebar_container">
-        
-        <a href="Geschiedenis.html">
-            <div id="topbar2" class="topbar border">
-                <p> Geschiedenis </p>
-            </div>
-        </a>
-        
-        <a href="Poll.html">
-            <div id="topbar3" class="topbar border">
-                <p> Poll </p>
-            </div>
-        </a>
+        <%
+        var items = [
+            {
+                "href":"Geschiedenis.html",
+                "text":"Geschiedenis"
+            },{
+                "href":"Poll.html",
+                "text":"Poll"
+            },{
+                "href":"Theorie.html",
+                "text":"Theorie"
+            },{
+                "href":"Data.html",
+                "text":"Data"
+            },{
+                "href":"Extra.html",
+                "text":"Extra"
+            },{
+                "href":"Documentaire.html",
+                "text":"Documentaire"
+            },
+        ];
+        items.forEach(function(item,index){
+            index = index + 1;
 
-        <a href="Theorie.html">
-            <div id="topbar4" class="topbar border">
-                <p> Theorie </p>
+        %>
+        <a href="<%= item.href %>">
+            <div id="topbar<%= index %>" class="topbar border">
+                <p> <%= item.text %> </p>
             </div>
         </a>
-
-        <a href="Data.html">
-            <div id="topbar5" class="topbar border">
-                <p> Data </p>
-            </div>
-        </a>
-        
-        <a href="Extra.html">
-            <div id="topbar6" class="topbar border">
-                <p> Extra </p>
-            </div>
-        </a>
-        
-        <a href="Documentaire.html">
-            <div id="topbar7" class="topbar border">
-                <p> Documentaire </p>
-            </div>
-        </a>
+        <% 
+        });
+        %>
         
     </div>
 </div>
