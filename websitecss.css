@@ -420,13 +420,13 @@ DIFFERENT COLORS FOR DIFFERENT SITES. DEFINED BY P...
 body.pextra, body.pdata, body.pgeschiedenis, body.pdocumentaire, body.ptheorie, body.ppol, {background-color:dimgrey;
 }
 
-.bars.pextra {background-color:#8A00B8}
-.bars.pdata {background-color:#0000CC;}
-.bars.pgeschiedenis {background-color:#268A47;}
-.bars.pdocumentaire {background-color:#B20000}
-.bars.ptheorie {background-color:#CC0000}
-.bars.ppol{background-color: #FFAD33}
-.bars.phomepage {background-color:#E65C00;}
+.pextra .bars {background-color:#8A00B8}
+.pdata .bars {background-color:#0000CC;}
+.pgeschiedenis .bars {background-color:#268A47;}
+.pdocumentaire .bars {background-color:#B20000}
+.ptheorie .bars {background-color:#CC0000}
+.ppol .bars{background-color: #FFAD33}
+.phomepage .bars {background-color:#E65C00;}
 
 .topbox.pdata, .backgroundphonebar.pdata {
     border-color:#00008F;}
@@ -444,20 +444,28 @@ body.pextra, body.pdata, body.pgeschiedenis, body.pdocumentaire, body.ptheorie, 
     border-color:#B82593}
 .bars.phomepage {border-color:#B84A00;}
 
-
+/* HOVER NAVIGATIEMENU */
 .lightup.pextra:hover {color:purple;}
-
 .lightup.pdata:hover {color:blue;}
-
 .lightup.pgeschiedenis:hover {color:green;}
-
 .lightup.pdocumentaire:hover {color:#990000;}
-
 .lightup.ptheorie:hover {color:#B20000;}
-
 .lightup.pcontact:hover {color:#B82593;}
-
 .lightup.phomepage:hover {color:darkorange;}
+
+
+
+
+/* 
+
+--------------------------
+       FILMPJES
+--------------------------
+*/
+iframe.pdocumentaire {
+    bottom:700px;
+}
+
 
 
 /* 
@@ -640,9 +648,6 @@ TABS
             position: absolute;
         }
         
-.bars.pbronnen {}
-.bars.pextra {}
-.bars.pdata {background-color:#0000CC;}
 
 
         .toggled .bars {
@@ -1405,7 +1410,7 @@ TABS
     overflow:hidden;
 }
 
-.topbar p {
+a.topbar {
     font-size: 15px;
     text-decoration:none;
     font-family:"Open Sans", sans-serif;
@@ -1417,6 +1422,8 @@ TABS
     position:relative;
     overflow:hidden;
     font-weight:bold;
+    margin-top:15px;
+    margin-bottom:15px;
         
 }
 
