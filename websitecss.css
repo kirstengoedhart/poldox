@@ -10,13 +10,13 @@
     }
 
     80% {
-        opacity:0;
+        xopacity:0;
         transform:scale3d(4, 4, 4);
     }
     
     100% {
-        opacity:0;
-        visibility:hidden;
+        xopacity:0;
+        xvisibility:hidden;
     }
 }
 
@@ -837,6 +837,7 @@ TABS
     height: 400px;
     margin-left: -200px;
     margin-top:-200px;
+    pointer-events: none;
     background-color:transparent;
     border-radius:10px;
     padding:10px 10px 10px 10px;
@@ -1001,7 +1002,6 @@ TABS
     font-family:sans-serif;
     font-style: none;
     overflow:hidden;
-    transition-delay:0.3s;
     transition-duration:0.3s;
     display:block;
     margin-top:20px;
@@ -1103,8 +1103,8 @@ TABS
 
 .pbars_container {
     position: absolute;
-    top:330px;
-    left: 110px;
+    top:230px;
+    left: 60px;
     width: 195px;
     height: 195px;
     cursor:pointer;
@@ -1126,7 +1126,7 @@ TABS
     border-radius:10px;
     border:1px solid white;
     box-shadow:3px 3px 5px dimgrey;
-    opacity:0.6;
+    opacity:1;
 }
 
 .ptoggled .pbars {
@@ -1202,8 +1202,8 @@ TABS
 
 .littlebars_container {
     position: absolute;
-    top:208px;
-    left: 90px;
+    top:108px;
+    left: 30px;
     width: 15px;
     height: 15px;
     cursor:pointer;
@@ -1260,39 +1260,52 @@ TABS
 
 --------------------------------------------------------
 */
+body.pindex.intro {
+    background-color: black;
+}
 
 .beforemenu {
    opacity:1;
    background-color:black;
    height:100%;
    width:100%;
+   margin: 0;
+   top: 0;
+   left: 0;
    z-index:1500;
-   position: absolute;
-   transition: opacity 2s linear;
+   position: fixed;
+   transition: opacity 1s linear;
    transition-delay:1s;
 } 
 
-.beforemenu_toggled {
-    opacity:0;
-    height:100%;
-    width:100%;
-    z-index:-2000;
-    position:absolute;
-    transition: opacity 2s linear;
-
+.phonebg {
+    transition-delay: 0.5s;
+    transition: background-color 0.3s linear;
+    background: black;
+    position: absolute;
+    width: 269px;
+    left: 20px;
+    height: 470px;
+    top: 90px;
 }
 
-.beforemenuOut {
-   background-color:black;
-   height:100%;
-   width:100%;
-   z-index:1500;
-   position: absolute;
-   transition: opacity 2s linear;
-   transition-delay:1s;
+
+
+.beforemenu_toggled .phonebg {
+    background: white;
+}
+
+.beforemenu_toggled {
+    opacity:0;
+    pointer-events: none;
+}
+.beforemenu_toggled .phoneframe {
+    transform:scale3d(4, 4, 4);
 }
 
 .phoneframe {
+    transition: transform 1s ease-in;
+    transform:scale3d(1, 1, 1);
     left:50%;
     top:50%;
     margin-left:-154px;
@@ -1333,54 +1346,40 @@ TABS
     cursor:pointer;
 }
 
-.greenbutton_hp2 {
+.left-phone-button {
     position:absolute;
-    top:675px;
-    left:175px;
-    height:60px;
-    width:60px;
-    background-color:limegreen;
-    z-index:2001;
-    border-radius:50%;
-    cursor:pointer;
-}
-
-.redbutton_hp2 {
-    position:relative;
-    top:675px;
-    left:175px;
+    top:575px;
+    left:125px;
     height:60px;
     width:60px;
     background-color:red;
-    z-index:2001;
+    z-index: 2001;
     border-radius:50%;
     cursor:pointer;
 }
 
-.phonescreen_off {
+.phonescreen {
    position:absolute;
-   top:187px;
-   left:70px;
-   z-index:-1;
+   top: 90px;
+   left: 18px;
+   z-index:2000;
    height:475px;
    width:273px;
+   opacity: 1;
+   transition: opacity 0.5s ease-in;
    background-color:black;
-   opacity:0.5;
    border-radius:5px;
 }
 
-.phonescreen_on {
-    position:absolute;
-    top:187px;
-    left:70px;
-    z-index:-1000;
-    height:475px;
-    width:273px;
-    background-color:white;
-    opacity:0.5;
-    border-radius:5px;
-
+.left-phone-on .phonescreen {
+    opacity: 0;
+    pointer-events: none;
 }
+
+.left-phone-on .left-phone-button {
+    background-color: limegreen;
+}
+
 
 /*
 --------------------------------------------------------
@@ -1442,10 +1441,10 @@ TABS
     background-color:lightgrey;
     width: 273px;
     height:30px;
-    position:fixed;
+    position:absolute;
     z-index:-500;
-    top:210px;
-    left:67px;
+    top:110px;
+    left:7px;
     overflow:hidden;
 
 }
@@ -1510,26 +1509,23 @@ a.topbar {
 ------------------------------------------------------
 */
 
+
 .phoneleft{
     position:absolute;
     top:100px;
     left:50px;
     z-index:-1;
+    transition: transform 0.5s ease-out;
+    transition-delay: 2s;
+    transform: translateX(-500px);
 }
 
-.phoneleft2 {
-    position:absolute;
-    top:100px;
-    left:50px;
-    opacity:0;
-    z-index:-1;
-    
+
+.phoneleft.show-left-phone {
+    transform: translateX(0);
+    transition-delay: 2s;
 }
 
-#phoneleft2 {
-    height:651px;
-    width:308px;
-}
 
 .phoneleft img {
     height:651px;

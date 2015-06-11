@@ -3,6 +3,13 @@ $(document).ready(function(){
     var $menu_button = $('.bars_container');
     var $menu = $('.big_bars_container');
     var $menu_bg = $('.background');
+    var $intro_button = $('.beforemenu .phonebutton');
+    var $intro_phone = $('.beforemenu .phoneframe');
+    var $intro = $('.beforemenu');
+    var $left_phone = $('.phoneleft');
+    var $left_phone_buttons = $('.pbars, .littlebars');
+    var $left_phone_power_button = $('.left-phone-button');
+    var $body = $('body');
 
     /*******************************************
     STATE
@@ -13,13 +20,16 @@ $(document).ready(function(){
 
     State means: "all information needed to represent the
     current condition of the application"
-
-    In this case, all information we need is: is the menu open or closed?
-
     *********************************************/
     var state = {
-        // in this case, we only have "show_menu": true or false.
-        show_menu: false
+        // we  have "show_menu": true or false.
+        show_menu: false,
+        // shows black intro screen
+        intro: true,
+        // left phone power
+        power: false,
+        // left phone visible
+        show_left_phone: false
     };
 
     /*
@@ -32,6 +42,31 @@ $(document).ready(function(){
     - Given a state, update the layout
      */
 
+    // Events:
+    $menu_button.click(function(){
+        // update state
+        state.show_menu = !state.show_menu;
+        // draw layout using state.
+        draw(state);
+    });
+
+    $left_phone_buttons.click(function(){
+        state.show_menu = true;
+        draw(state);
+    });
+
+    $intro_button.click(function(){
+        state.intro = false;
+        state.power = true;
+        state.show_left_phone = true;
+        draw(state);
+    });
+
+    $left_phone_power_button.click(function(){
+        state.power = !state.power;
+        draw(state);
+    });
+
     // DRAW:
     // 
     // Given an input (state), 
@@ -41,53 +76,47 @@ $(document).ready(function(){
         if(!state.show_menu){   
             $menu_button.addClass('toggled');
             $menu.addClass('big_toggled');
+            $left_phone.removeClass('ptoggled');
             $menu_bg.addClass('background_toggled');
 
         // Show menu:
         } else {
             $menu_button.removeClass('toggled');
             $menu.removeClass('big_toggled');
+            $left_phone.addClass('ptoggled');
             $menu_bg.removeClass('background_toggled');
         }
-    }
 
-    // Events:
-    $menu_button.click(function(){
-        // update state
-        state.show_menu = !state.show_menu;
-        // draw layout using state.
-        draw(state);
-    });
+        // Show Intro Screen
+        if(state.intro){
+            $body.addClass('intro');
+            $intro.removeClass('beforemenu_toggled');
+
+        // Hide Intro Screen
+        } else {
+            $body.removeClass('intro'); 
+            $intro.addClass('beforemenu_toggled');
+        }
+
+        // POWER UP
+        if(state.power){
+            $left_phone.addClass('left-phone-on');
+        
+        // POWER DOWN
+        } else {
+            $left_phone.removeClass('left-phone-on');
+        }
+
+        // Show left phone
+        if(state.show_left_phone){
+            $left_phone.addClass('show-left-phone');
+        // Hide left phone
+        } else {
+            $left_phone.removeClass('show-left-phone');
+        }
+    }
 
     // Initialize layout with current state
     draw(state);
 
-
-     //Klikken op de groene knop
-     $('.greenbutton_hp2').click(function() { 
-        //Knop wordt rood/groen
-        $('.greenbutton_hp2').toggleClass('redbutton_hp2');
-        $('.phonescreen_on').toggleClass('phonescreen_off');
-
-        // Het scherm wordt zwart
-        $('.beforemenu_hp2').addClass('beforemenu fadeInAnimation');
-        //Vorige moet verwijderd worden voor ronde cirkel
-        $('.beforemenu_hp2').removeClass('beforemenuOut fadeOutAnimation');
-        $('.littlebars_container').toggleClass('littlebars_containerlight');
-    });
-
-    //Klikken op de rode knop
-    $('.redbutton_hp2').click(function() {
-        $('.greenbutton_hp2').toggleClass('redbutton_hp2');
-        $('.beforemenu_hp2').removeClass('beforemenu fadeInAnimation');
-        //Werkt niet ? 
-        $('.beforemenu_hp2').addClass('beforemenuOut fadeOutAnimation');
-        $pbars_container.toggleClass('pbars_containerlight');       
-        $('.littlebars_container').toggleClass('littlebars_containerlight');
-    });
-
-    // Bij klikken op kleine balkjes knipperen grotere balkjes paars werkt niet
-    $('.littlebars_container').click(function(event){
-        $('.bars').addClass('colorAnimation');
-    });
 });
