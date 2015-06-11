@@ -24,11 +24,14 @@
             },{
                 "href":"Documentaire.html",
                 "text":"Documentaire"
-            },
+            },{
+                "href":"Contact.html",
+                "text":"Contact"
+            }
         ];
         items.forEach(function(item){
         %>
-        <a class="lightup topbar pextra" href="<%= item.href %>"><%= item.text %></a>
+        <a class="lightup topbar p<%= current.source.toLowerCase() %>" href="<%= item.href %>"><%= item.text %></a>
         <% 
         });
         %>

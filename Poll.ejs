@@ -1,85 +1,66 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-         <link rel="stylesheet" href="websitecss.css" type="text/css"/>
-    
-  <title>Poll</title>
-    
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1138.51">
-  <style type="text/css">
-      
-      
-      
-    .middlepoll {
-        position:absolute;
-        height:100%;
-        width:100%;
-        background-color:transparent;
-        z-index:-1000;
-    }
-      
-.tabs_container {
-    position:absolute;
-    top:12px;
-    left:30px;
+<style>
+button {
+  border: 1px solid black;
+  border-radius: 2px;
+  background-color: white;
 }
+.chart {
+  width: 200px;
+  height: 200px;
+}
+.selected {
+  background-color: red;
+  color: white;
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js" type="text/javascript"></script>
+<script src="https://cdn.firebase.com/js/client/2.2.6/firebase.js" type="text/javascript"></script>
+<script src="js/poll.js" type="text/javascript"></script>
+<%
+  var poll = [
+      {
+        id: 'test',
+        question: 'Bent U het eens met deze stelling',
+        answers: [ 'Ja', 'Nee' ]
+      },
+      {
+        id: 'sex',
+        question: 'Ben je een man of vrouw?',
+        answers: [ 'Man','Vrouw', 'Ik laat me niet indelen']
+      },
+      {
+        id: 'code',
+        question: 'Wie is je favoriete programmeur?',
+        answers: [ 'Mark','Kirsten', 'Edward Snowden']
+      }
+  ];
 
-      
-    .border {
-        z-index:1;
-    }
-      
-  </style>
-</head>
-<body>
-    
-<div class="border">
-<div id="left"></div>
-<div id="right"></div>
-<div id="top"></div>
-<div id="bottom"></div>
+%>
+<div class="filler">
 </div>
-    
-<div class="middlepoll"></div>
-    
-    <div class="tabs_container">
-<ul id="tabs">
-    <li><a href="#" title="tab1">One</a></li>
-    <li><a href="#" title="tab2">Two</a></li>
-    <li><a href="#" title="tab3">Three</a></li>
-    <li><a href="#" title="tab4">Four</a></li>    
-</ul>
-
-<div id="content"> 
-    <div id="tab1">One - content</div>
-    <div id="tab2">Two - content</div>
-    <div id="tab3">Three - content</div>
-    <div id="tab4">Four - content</div>
-</div>
+    <div class="poll">
+      <!-- teken alle vragen -->
+      <% poll.forEach(function(item){ %>
+        <div class="title"><%= item.question %></div>
+        <% item.answers.forEach(function(answer){ %>
+          <button question="<%= item.id %>" value="<%= answer %>"><%= answer %></button>
+        <% }) %>
+      <% }) %>
+      <hr/>
+      <button class="result-button">Klaar</button>
     </div>
-    
-    
-    
-</body>
-</html>
+    <div class="result" style="display:none;">
+      <h3><span question="responses" value="count"></span> resultaten:</h3>
 
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script>
-    
-$(document).ready(function() {
-    $("#content div").hide(); // Initially hide all content
-    $("#tabs li:first").attr("id","current"); // Activate first tab
-    $("#content div:first").fadeIn(); // Show first tab content
-    
-    $('#tabs a').click(function(e) {
-        e.preventDefault();        
-        $("#content div").hide(); //Hide all content
-        $("#tabs li").attr("id",""); //Reset id's
-        $(this).parent().attr("id","current"); // Activate this
-        $('#' + $(this).attr('title')).fadeIn(); // Show content for current tab
-    });
-});
-</script>
+      <!-- teken alle resultaten -->
+      <% poll.forEach(function(item){ %>
+        <div class="title"><%= item.question %></div>
+        <ul>
+        <% item.answers.forEach(function(answer){ %>
+          <li><%= answer %>: <span question="<%= item.id %>" value="<%= answer %>"></span></li>
+        <% }) %>
+        </ul>
+        <div id="<%= item.id %>-chart" class="chart"></div>
+      <% }) %>
+    </div>
