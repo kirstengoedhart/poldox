@@ -9,32 +9,10 @@
   <meta name="CocoaVersion" content="1138.51">
   <style type="text/css">
       
-.lefthis {
-    position:absolute;
-    height:100%;
-    width:50%;
-    left:0px;
-    background-color:#268A47;
-    border:1px solid white;
-}
 
-.righthis {
-    position:absolute;
-    height:100%;
-    width:50%;
-    right:0px;
-    background-color:#268A47;
-    border:1px solid white;
-}
 
       
-    .allhis {
-       position:absolute;
-          left:50%;
-          width:400px;
-          height:1px;
-          border-top:1px solid white;
-      }
+
       
       #his1 {
           top:302px;
@@ -64,40 +42,7 @@
       #his7 {
 }
       
-      .circle {
-          position:absolute;
-          left:50%;
-          margin-left:-5px;
-          border:2px solid white;
-          border-radius:50%;
-         background-color:white;
-          height:5px;
-          width:5px;
-          
-      }
     
-    .c1, #his1, #imghis1 {
-        top:300px;
-    }
-      
-    .c2, #his2, #imghis2 {
-        top:320px;
-    }
-    
-    .c3, #his3, #imghis3 {
-        top:500px;
-      }
-      
-    .c4, #his4, #imghis4 {
-        top:30px;
-    }
-    .c5, #his5, #imghis5 {
-        top:700px;
-    }
-      
-    .c6, #his6, #imghis6 {
-        top:540px;
-    }
       
   
 .containerhis p {
@@ -118,16 +63,7 @@
     text-align: right;
 }
       
-.imghis {
-    border:1px solid white;
-    border-radius:10px;
-    height:150px;
-    width:250px;
-    position:absolute;
-    overflow:hidden;
-    box-shadow: 5px 5px 7px dimgrey;
-    margin-top:-75px;
-}
+
       
 .imghis p {
     position:absolute;
@@ -159,30 +95,59 @@
   </style>
 </head>
 <body>
+<div id="top"></div>
+<div id="bottom"></div>  
+<div id="left"></div>  
+<div id="right"></div>  
     
-<div class="lefthis"></div>
-<div class="righthis"></div>
+<div class="pageleft pgeschiedenis"></div>
+<div class="pageright pgeschiedenis"></div>
 
-<div class="circle c1"></div>
-<div class="circle c2"></div>
-<div class="circle c3"></div>
-<div class="circle c4"></div>
     
-<div class="containerhis">
-    <div id="his1" class="allhis"><p class="right">Jaartal</p></div>
-    <div id="his2" class="allhis"><p class="left">Jaartal</p></div>
-    <div id="his3" class="allhis"><p class="right">Jaartal</p></div>
-    <div id="his4" class="allhis"><p class="right">Jaartal</p></div>
-    <div id="his5" class="allhis"><p class="right">Jaartal</p></div>
-    <div id="his6" class="allhis"><p class="left">Jaartal</p></div>
-  
-<div class="imageshis">
-    <div class="imghis r" id="imghis1"><img src="img/bubbles.jpg"/><p class="right">Texttexttext</p></div>
-    <div class="imghis l" id="imghis2"><img src="img/bubbles.jpg"/><p class="left">Texttexttext</p></div>
-    <div class="imghis r" id="imghis3"><img src="img/bubbles.jpg"/><p class="right">Texttexttext</p></div>
-    <div class="imghis r" id="imghis4"><img src="img/bubbles.jpg"/><p class="right">Texttexttext</p></div>
-    <div class="imghis r" id="imghis5"><img src="img/bubbles.jpg"/><p class="right">Texttexttext</p></div>
-    <div class="imghis l" id="imghis6"><img src="img/bubbles.jpg"/><p class="left">Texttexttext</p></div>
+
+<div class="allcircles pgeschiedenis">
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+    <div class="circle c3"></div>
+    <div class="circle c4"></div>
+    <div class="circle c5"></div>
+    <div class="circle c6"></div>
+    <div class="circle c7"></div>
+    <div class="circle c8"></div>
+    <div class="circle c9"></div>
+    <div class="circle c10"></div>
+    <div class="circle c11"></div>
+    <div class="circle c12"></div>
+    <div class="circle c13"></div>
     </div>
+<!---
+<div class="containerhis">
+    <div id="his1" class="alltexts pgeschiedenis"><p class="right">1854</p></div>
+    <div id="his2" class="alltexts pgeschiedenis"><p class="left">1860</p></div>
+    <div id="his3" class="alltexts pgeschiedenis"><p class="right">1876</p></div>
+    <div id="his4" class="alltexts pgeschiedenis"><p class="left">1879</p></div>
+    <div id="his5" class="alltexts pgeschiedenis"><p class="right">1881</p></div>
+    <div id="his6" class="alltexts pgeschiedenis"><p class="left">1925</p></div>
+    <div id="his7" class="alltexts pgeschiedenis"><p class="right">1964</p></div>
+    <div id="his8" class="alltexts pgeschiedenis"><p class="left">1973</p></div>
+    <div id="his9" class="alltexts pgeschiedenis"><p class="right">1982</p></div>
+    <div id="his10" class="alltexts pgeschiedenis"><p class="left">1992</p</div>
+    <div id="his11" class="alltexts pgeschiedenis"><p class="right">2000</p</div>
+    <div id="his12" class="alltexts pgeschiedenis"><p class="left">2007</p</div>
+    <div id="his13" class="alltexts pgeschiedenis"><p class="right">2010</p</div>
+</div>
+
+  
+<div class="allimages pgeschiedenis">
+    <div class="image pgeschiedenis r" id="imghis1"><img src="img/bubbles.jpg"/></div>
+    <div class="image pgeschiedenis l" id="imghis2"><img src="img/bubbles.jpg"/></div>
+    <div class="image pgeschiedenis r" id="imghis3"><img src="img/bubbles.jpg"/></div>
+    <div class="image pgeschiedenis r" id="imghis4"><img src="img/bubbles.jpg"/></div>
+    <div class="image pgeschiedenis r" id="imghis5"><img src="img/bubbles.jpg"/></div>
+    <div class="image pgeschiedenis l" id="imghis6"><img src="img/bubbles.jpg"/></div>
+    </div>
+        
+   --->     
+        
 </body>
 </html>
