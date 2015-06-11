@@ -417,7 +417,8 @@ WEBSITE EXTRA's
 /* ------------------------------------------
 DIFFERENT COLORS FOR DIFFERENT SITES. DEFINED BY P...
 ------------------------------------------*/
-body.pextra, body.pdata, body.pgeschiedenis, body.pdocumentaire, body.ptheorie, body.ppol, {background-color:dimgrey;
+body.pextra, body.pdata, body.pgeschiedenis, body.pdocumentaire, body.ptheorie, body.ppol {
+    background-color: dimgrey;
 }
 
 .pextra .bars {background-color:#8A00B8}
@@ -1396,7 +1397,7 @@ TABS
 .phonebar_container {
     width:100%;
     position:fixed;
-    padding-left:50px;
+    padding-left:90px;
     overflow:hidden;
     top:20px;
     z-index:1;
@@ -1405,7 +1406,7 @@ TABS
 
 
 .topbar {
-    width:150px;
+    width:auto;
     display:inline-block;
     overflow:hidden;
 }
@@ -1415,6 +1416,7 @@ a.topbar {
     text-decoration:none;
     font-family:"Open Sans", sans-serif;
     color:dimgrey;
+    padding: 0 20px;
     font-style: none;
     transition-delay:0.3s;
     transition-duration:0.3s;
