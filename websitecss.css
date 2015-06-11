@@ -5,230 +5,231 @@
         Animations
 --------------------
         
-        */
- 
+*/
+
 
 @keyframes zoomInLeft {
-0% {
-    opacity:1;
-    transform: scale3d(1, 1, 1);
+    0% {
+        opacity:1;
+        transform: scale3d(1, 1, 1);
+    }
+
+    80% {
+        opacity:0;
+        transform:scale3d(4, 4, 4)
+    }
+    
+    100% {
+        opacity:0;
+        visibility:hidden;
+    }
 }
 
-80% {
-    opacity:0;
-    transform:scale3d(4, 4, 4)
-}
-    
-100% {
-    opacity:0;
-    visibility:hidden;
-}
-}
-    
 
 .zoomInLeft {
     animation: zoomInLeft 4s none;
     animation-delay:0.1s;
     animation-fill-mode: both;
 }
-    
-        
-      @keyframes buttonAnimation {
-        0% {
-            opacity:0;
-            transform: translate3d(0,0,0)}
-        
-        100% {
-            opacity:1;
-            transform: translate3d(0 ,0, 0);}
-}
 
 
-        
-    .buttonAnimation {
-        animation:buttonAnimation forwards;
-        animation-duration:2s;
-        animation-delay:4s;
-        animation-fill-mode: both;
-    }
-
-    @keyframes fadeInAnimation {
-        0% {
-            opacity:0;
-            transform: translate3d(0,0,0)}
-        
-        100% {
-            opacity:1;
-            transform: translate3d(0 ,0, 0);}
-}
-
-
-        
-    .fadeInAnimation {
-        animation:fadeInAnimation forwards;
-        animation-duration:2s;
-        animation-fill-mode: both;
-    }
-
-
-
-  @keyframes fadeOutAnimation {
-        0% {
-            opacity:1;
-            transform: translate3d(0,0,0)}
-        
-        100% {
-            opacity:0;
-            transform: translate3d(0 ,0, 0);}
-}
-
-
-        
-    .fadeOutAnimation {
-        animation:fadeOutAnimation forwards;
-        animation-duration:2s;
-        animation-fill-mode: both;
-    }
-
-   @keyframes fadeInDelayAnimation {
-        0% {
-            opacity:0;
-            transform: translate3d(0,0,0)}
-        
-        100% {
-            opacity:1;
-            transform: translate3d(0 ,0, 0);}
-}
-
-
-        
-    .fadeInDelayAnimation {
-        animation:fadeInDelayAnimation forwards;
-        animationdelay:3s;
-        animation-duration:2s;
-        animation-fill-mode: both;
-    }
-
-
-@keyframes animationphoneleft {
+@keyframes buttonAnimation {
     0% {
-        transform: translate3d(-100%, 0, 0);
         opacity:0;
-    }
-    
+        transform: translate3d(0,0,0);
+    }   
     100% {
-        transform: translate3d (0, 0, 0);
-        opacity:0.8;
-  
+        opacity:1;
+        transform: translate3d(0 ,0, 0);
     }
 }
-    
-.animationphoneleft {
-    animation:animationphoneleft ease-in-out;
+     
+.buttonAnimation {
+    animation:buttonAnimation forwards;
     animation-duration:2s;
-    animation-delay:1s;
+    animation-delay:4s;
     animation-fill-mode: both;
 }
 
-@keyframes animationphoneleft_hp {
+@keyframes fadeInAnimation {
     0% {
-        transform: translate3d(-100%, 0, 0);
         opacity:0;
+        transform: translate3d(0,0,0);
     }
-    
+
     100% {
-        transform: translate3d (0, 0, 0);
-        opacity:0.8;
-  
+        opacity:1;
+        transform: translate3d(0 ,0, 0);
     }
 }
-    
-.animationphoneleft_hp {
-    animation:animationphoneleft ease-in-out;
-    animation-duration:2s;
-    animation-delay:2.5s;
-    animation-fill-mode: both;
-}
-
-@keyframes colorAnimation {
-        0% {
-            background-color:black;
-        }
-    20% {
-        background-color:blueviolet;
-    }
-    60% {
-        background-color:black;
-    }
-      80% {
-        background-color:blueviolet;
-    }
-        100% {
-            background-color:black;
-        }
-}
 
 
-        
-    .colorAnimation {
-        animation:colorAnimation forwards;
-        animation-duration:4s;
-        animation-fill-mode: both;
-    }
+
+                .fadeInAnimation {
+                    animation:fadeInAnimation forwards;
+                    animation-duration:2s;
+                    animation-fill-mode: both;
+                }
 
 
-@keyframes colorAnimation2 {
-        0% {
-            background-color:blueviolet;
-        }
-    20% {
-        background-color:black;
-    }
-    60% {
-        background-color:blueviolet;
-    }
-      80% {
-        background-color:black;
-    }
-        100% {
-            background-color:blueviolet;
-        }
-}
+
+                @keyframes fadeOutAnimation {
+                    0% {
+                        opacity:1;
+                        transform: translate3d(0,0,0)}
+
+                        100% {
+                            opacity:0;
+                            transform: translate3d(0 ,0, 0);}
+                        }
 
 
-        
-    .colorAnimation2 {
-        animation:colorAnimation2 forwards;
-        animation-duration:4s;
-        animation-fill-mode: both;
-    }
+
+                        .fadeOutAnimation {
+                            animation:fadeOutAnimation forwards;
+                            animation-duration:2s;
+                            animation-fill-mode: both;
+                        }
+
+                        @keyframes fadeInDelayAnimation {
+                            0% {
+                                opacity:0;
+                                transform: translate3d(0,0,0)}
+
+                                100% {
+                                    opacity:1;
+                                    transform: translate3d(0 ,0, 0);}
+                                }
+
+
+
+                                .fadeInDelayAnimation {
+                                    animation:fadeInDelayAnimation forwards;
+                                    animationdelay:3s;
+                                    animation-duration:2s;
+                                    animation-fill-mode: both;
+                                }
+
+
+                                @keyframes animationphoneleft {
+                                    0% {
+                                        transform: translate3d(-100%, 0, 0);
+                                        opacity:0;
+                                    }
+
+                                    100% {
+                                        transform: translate3d (0, 0, 0);
+                                        opacity:0.8;
+
+                                    }
+                                }
+
+                                .animationphoneleft {
+                                    animation:animationphoneleft ease-in-out;
+                                    animation-duration:2s;
+                                    animation-delay:1s;
+                                    animation-fill-mode: both;
+                                }
+
+                                @keyframes animationphoneleft_hp {
+                                    0% {
+                                        transform: translate3d(-100%, 0, 0);
+                                        opacity:0;
+                                    }
+
+                                    100% {
+                                        transform: translate3d (0, 0, 0);
+                                        opacity:0.8;
+
+                                    }
+                                }
+
+                                .animationphoneleft_hp {
+                                    animation:animationphoneleft ease-in-out;
+                                    animation-duration:2s;
+                                    animation-delay:2.5s;
+                                    animation-fill-mode: both;
+                                }
+
+                                @keyframes colorAnimation {
+                                    0% {
+                                        background-color:black;
+                                    }
+                                    20% {
+                                        background-color:blueviolet;
+                                    }
+                                    60% {
+                                        background-color:black;
+                                    }
+                                    80% {
+                                        background-color:blueviolet;
+                                    }
+                                    100% {
+                                        background-color:black;
+                                    }
+                                }
+
+
+
+                                .colorAnimation {
+                                    animation:colorAnimation forwards;
+                                    animation-duration:4s;
+                                    animation-fill-mode: both;
+                                }
+
+
+                                @keyframes colorAnimation2 {
+                                    0% {
+                                        background-color:blueviolet;
+                                    }
+                                    20% {
+                                        background-color:black;
+                                    }
+                                    60% {
+                                        background-color:blueviolet;
+                                    }
+                                    80% {
+                                        background-color:black;
+                                    }
+                                    100% {
+                                        background-color:blueviolet;
+                                    }
+                                }
+
+
+
+                                .colorAnimation2 {
+                                    animation:colorAnimation2 forwards;
+                                    animation-duration:4s;
+                                    animation-fill-mode: both;
+                                }
 
 /*
 -----------------------------------------------------------
             De algemene lay out 
 -----------------------------------------------------------
 */
- #top, #bottom, #left, #right {
+#top, #bottom, #left, #right {
 	background-color:dimgrey;
 	position: fixed;
-	}
+}
 
-	#left, #right {
-		top: 0; bottom: 0;
-		width: 30px;
-		}
-      
-		#left { left: 0; }
-		#right { right: 0; }
-		
-	#top, #bottom {
-		left: 0; right: 0;
-		height: 30px;
-		}
-      
-		#top { top: 0; }
-		#bottom { bottom: 0; }
-    
+#left, #right {
+  top: 0; bottom: 0;
+  width: 30px;
+}
+
+#left { left: 0; }
+#right { right: 0; }
+
+#top, #bottom {
+  left: 0; right: 0;
+  height: 30px;
+}
+
+#top { top: 0; }
+#bottom { bottom: 0; }
+
 
 .backgroundphonebar{
     position:fixed;
@@ -319,7 +320,7 @@ WEBSITE EXTRA's
     overflow:hidden;
     border-radius:30px;
     padding:20px 10px 10px 20px;
-/*#EB99FF*/
+    /*#EB99FF*/
     
 }
 
@@ -343,7 +344,7 @@ WEBSITE EXTRA's
     text-align: left;
     position:relative;
     overflow:hidden;
-    }
+}
 
 .subcontainer.pextra h3 {
     top:-150px;
@@ -357,7 +358,7 @@ WEBSITE EXTRA's
     margin-right:10px;
     top:10px;
     opacity:1;
-     color:#2F1F33;
+    color:#2F1F33;
 }
 
 
@@ -430,19 +431,26 @@ body.pextra, body.pdata, body.pgeschiedenis, body.pdocumentaire, body.ptheorie, 
 .phomepage .bars {background-color:#E65C00;}
 
 .topbox.pdata, .backgroundphonebar.pdata {
-    border-color:#00008F;}
-.topbox.pextra, backgroundphonebar.pextra {
-    border-color:#4D0067;}
+    border-color:#00008F;
+}
+.topbox.pextra, .backgroundphonebar.pextra {
+    border-color:#4D0067;
+}
 .backgroundphonebar.pgeschiedenis {
-    border-color:#17532B;}
+    border-color:#17532B;
+}
 .backgroundphonebar.pdocumentaire {
-    border-color:#8E0000;}
+    border-color:#8E0000;
+}
 .backgroundphonebar.pextra {
-    border-color:#4D0067;}
+    border-color:#4D0067;
+}
 .backgroundphonebar.ptheorie {
-    border-color:#A30000;}
+    border-color:#A30000;
+}
 .backgroundphonebar.pcontact{
-    border-color:#B82593}
+    border-color:#B82593
+}
 .bars.phomepage {border-color:#B84A00;}
 
 /* HOVER NAVIGATIEMENU */
@@ -475,7 +483,7 @@ iframe.pdocumentaire {
        CONTENT HOMEPAGE
 --------------------------
 */
-      
+
 .contenthomepage {
     position:absolute;
     top:100px;
@@ -501,59 +509,57 @@ iframe.pdocumentaire {
 }
 
 
-   .homepagecontent a {
-        color:white;
-        text-decoration:none;
-        text-align:center;
-        width:120px;
-        height:120px;
-        }
-        
-        .pagetext {
-        text-align:center;
-        font-size: 30px;
-        margin-bottom:0px;
-        margin-top:20px;
-        font-size: 10px;
-        color:white;
-        font-family:"Open Sans", sans-serif;
-        text-transform:uppercase;
-        overflow:hidden;
-        transition-delay:0.3s;
-        transition-duration:0.3s;
-        display:block;
-        margin-top:20px;
-        position:relative;
-        text-shadow: 1px 1px 1px black;
-        margin-top:10px;
-        opacity:1;
-   
-        }
+.homepagecontent a {
+    color:white;
+    text-decoration:none;
+    text-align:center;
+    width:120px;
+    height:120px;
+}
 
-      
-        .hpbar img {
-            height:50px;
-            width:50px;
-            margin-top:30px;
-            margin-left:30px;
-            position:relative;
-            overflow:hidden;
-        }
+.pagetext {
+    text-align:center;
+    font-size: 30px;
+    margin-bottom:0px;
+    margin-top:20px;
+    font-size: 10px;
+    color:white;
+    font-family:"Open Sans", sans-serif;
+    text-transform:uppercase;
+    overflow:hidden;
+    transition-delay:0.3s;
+    transition-duration:0.3s;
+    display:block;
+    margin-top:20px;
+    position:relative;
+    text-shadow: 1px 1px 1px black;
+    margin-top:10px;
+    opacity:1;
+}
+
+.hpbar img {
+    height:50px;
+    width:50px;
+    margin-top:30px;
+    margin-left:30px;
+    position:relative;
+    overflow:hidden;
+}
 
 .hpbar {
-            width: 120px;
-            height: 120px;
-            position: absolute;
-            border: 1px solid #CCC;
-            border-radius: 23px;
-            margin: 10px, 10px, 10px, 10px;
-            padding: 10px, 10px, 10px, 10px;
-            opacity:.8;
-            display:inline-grid;
-            float:clear;
-            box-shadow:5px 5px 10px dimgrey;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    border: 1px solid #CCC;
+    border-radius: 23px;
+    margin: 10px, 10px, 10px, 10px;
+    padding: 10px, 10px, 10px, 10px;
+    opacity:.8;
+    display:inline-grid;
+    float:clear;
+    box-shadow:5px 5px 10px dimgrey;
 }
-   
+
 /*
 --------------------------------------------------------------
 TABS
@@ -619,7 +625,7 @@ TABS
 }
 
 
-        
+
 /* 
 
 --------------------------
@@ -628,99 +634,88 @@ TABS
 
 */
 
- .bars_container {
-            position: fixed;
-            top:20px;
-            left: 35px;
-            width: 40px;
-            height: 40px;
-            cursor:pointer;
-            padding-top:10px;
-     padding-left:10px;
-        z-index:1501;
-        }
-        
-        .bars {
-            /* blue blocks */
-            transition: transform 0.2s linear, background-color 0.2s linear;
-            background-color: blueviolet;
-            width: 9px;
-            height: 9px;
-            position: absolute;
-        }
-        
+.bars_container {
+    position: fixed;
+    top:20px;
+    left: 35px;
+    width: 40px;
+    height: 40px;
+    cursor:pointer;
+    padding-top:10px;
+    padding-left:10px;
+    z-index:1501;
+}
+
+.bars {
+    /* blue blocks */
+    transition: transform 0.2s linear, background-color 0.2s linear;
+    background-color: blueviolet;
+    width: 9px;
+    height: 9px;
+    position: absolute;
+}
 
 
-        .toggled .bars {
-            background-color: black;
-            
-        }
-        .bars.x1.y1{
-            transform: translate(0,0);
-        }
-        .bars.x2.y1 {
-            transform: translate(10px,0);
-        }
-        .bars.x3.y1 {
-            transform: translate(20px,0);
-        }
-        .bars.x1.y2{
-            transform: translate(0,10px);
-        }
-        .bars.x2.y2 {
-            transform: translate(10px,10px);
-        }
-        .bars.x3.y2 {
-            transform: translate(20px,10px);
-        }
-        .bars.x1.y3{
-            transform: translate(0,20px);
-        }
-        .bars.x2.y3 {
-            transform: translate(10px,20px);
-        }
-        .bars.x3.y3 {
-            transform: translate(20px,20px);
-        }
-        
-        .toggled .bars.x1.y1{
-            transform: translate(-5px,-5px);
-        }
-        .toggled .bars.x2.y1 {
-            transform: translate(10px,-5px);
-        }
-        .toggled .bars.x3.y1 {
-            transform: translate(25px,-5px);
-        }
-        .toggled .bars.x1.y2{
-            transform: translate(-5px,10px);
-        }
-        .toggled .bars.x2.y2 {
-            transform: translate(10px,10px);
-        }
-        .toggled .bars.x3.y2 {
-            transform: translate(25px,10px);
-        }
-        .toggled .bars.x1.y3{
-            transform: translate(-5px,25px);
-        }
-        .toggled .bars.x2.y3 {
-            transform: translate(10px,25px);
-        }
-        .toggled .bars.x3.y3 {
-            transform: translate(25px,25px);
-        }
-        
 
-    
-        
-        
-        
+.toggled .bars {
+    background-color: black;
 
-        
-        
-        
-        
+}
+.bars.x1.y1{
+    transform: translate(0,0);
+}
+.bars.x2.y1 {
+    transform: translate(10px,0);
+}
+.bars.x3.y1 {
+    transform: translate(20px,0);
+}
+.bars.x1.y2{
+    transform: translate(0,10px);
+}
+.bars.x2.y2 {
+    transform: translate(10px,10px);
+}
+.bars.x3.y2 {
+    transform: translate(20px,10px);
+}
+.bars.x1.y3{
+    transform: translate(0,20px);
+}
+.bars.x2.y3 {
+    transform: translate(10px,20px);
+}
+.bars.x3.y3 {
+    transform: translate(20px,20px);
+}
+
+.toggled .bars.x1.y1{
+    transform: translate(-5px,-5px);
+}
+.toggled .bars.x2.y1 {
+    transform: translate(10px,-5px);
+}
+.toggled .bars.x3.y1 {
+    transform: translate(25px,-5px);
+}
+.toggled .bars.x1.y2{
+    transform: translate(-5px,10px);
+}
+.toggled .bars.x2.y2 {
+    transform: translate(10px,10px);
+}
+.toggled .bars.x3.y2 {
+    transform: translate(25px,10px);
+}
+.toggled .bars.x1.y3{
+    transform: translate(-5px,25px);
+}
+.toggled .bars.x2.y3 {
+    transform: translate(10px,25px);
+}
+.toggled .bars.x3.y3 {
+    transform: translate(25px,25px);
+}
 
 
 /* 
@@ -728,106 +723,106 @@ TABS
         Grote menu
 --------------------------
 */
-        
-        
-        .big_bars_container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 400px;
-            height: 400px;
-            margin-left: -200px;
-            margin-top:-200px;
-            background-color:transparent;
-            border-radius:10px;
-            padding:10px 10px 10px 10px;
-        }
-        
-     
-        
-        .big_bars {
-    
-            
-            transition: transform 0.4s linear, background-color 0.4s linear, opacity 0.3s linear;
-            background-color: transparent;
-            width: 120px;
-            height: 120px;
-            position: absolute;
-            border: 1px solid #CCC;
-           
-            border-radius: 23px;
-            margin: 10px, 10px, 10px, 10px;
-            padding: 10px, 10px, 10px, 10px;
-            display:inline;
-            opacity:0.4;
-            z-index:1501;
-            
-        }
 
-        .big_bars.big_x1.big_y1{
-            transform: translate(0,0);
-            background-color:orangered;
-        }
-        .big_bars.big_x2.big_y1 {
-            transform: translate(140px,0);
-            background-color:forestgreen;
-        }
-        .big_bars.big_x3.big_y1 {
-            transform: translate(280px,0);
-            background-color:orange;
-        }
-        .big_bars.big_x1.big_y2{
-            transform: translate(0,140px);
-            background-color:red;
-        }
-        .big_bars.big_x2.big_y2 {
-            transform: translate(140px,140px);
-            background-color:blue;
-        }
-        .big_bars.big_x3.big_y2 {
-            transform: translate(280px,140px);
-            background-color:blueviolet;
-        }
-        .big_bars.big_x1.big_y3{
-            transform: translate(0,280px);
-            background-color:darkred;
-        }
-        .big_bars.big_x2.big_y3 {
-            transform: translate(140px,280px);
-            background-color:dodgerblue;
-        }
-        .big_bars.big_x3.big_y3 {
-            transform: translate(280px,280px);
-            background-color:deeppink;
-        }
-        
-        .big_toggled .big_bars.big_x1.big_y1{
-            transform: translate(-100px,-100px);
-        }
-        .big_toggled .big_bars.big_x2.big_y1 {
-            transform: translate(140px,-100px);
-        }
-        .big_toggled .big_bars.big_x3.big_y1 {
-            transform: translate(380px,-100px);
-        }
-        .big_toggled .big_bars.big_x1.big_y2{
-            transform: translate(-100px,140px);
-        }
-        .big_toggled .big_bars.big_x2.big_y2 {
-            transform: translate(140px,140px);
-        }
-        .big_toggled .big_bars.big_x3.big_y2 {
-            transform: translate(380px,140px);
-        }
-        .big_toggled .big_bars.big_x1.big_y3{
-            transform: translate(-100px,380px);
-        }
-        .big_toggled .big_bars.big_x2.big_y3 {
-            transform: translate(140px,380px);
-        }
-        .big_toggled .big_bars.big_x3.big_y3 {
-            transform: translate(380px,380px);
-        }
+
+.big_bars_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-left: -200px;
+    margin-top:-200px;
+    background-color:transparent;
+    border-radius:10px;
+    padding:10px 10px 10px 10px;
+}
+
+
+
+.big_bars {
+
+
+    transition: transform 0.4s linear, background-color 0.4s linear, opacity 0.3s linear;
+    background-color: transparent;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    border: 1px solid #CCC;
+
+    border-radius: 23px;
+    margin: 10px, 10px, 10px, 10px;
+    padding: 10px, 10px, 10px, 10px;
+    display:inline;
+    opacity:0.4;
+    z-index:1501;
+
+}
+
+.big_bars.big_x1.big_y1{
+    transform: translate(0,0);
+    background-color:orangered;
+}
+.big_bars.big_x2.big_y1 {
+    transform: translate(140px,0);
+    background-color:forestgreen;
+}
+.big_bars.big_x3.big_y1 {
+    transform: translate(280px,0);
+    background-color:orange;
+}
+.big_bars.big_x1.big_y2{
+    transform: translate(0,140px);
+    background-color:red;
+}
+.big_bars.big_x2.big_y2 {
+    transform: translate(140px,140px);
+    background-color:blue;
+}
+.big_bars.big_x3.big_y2 {
+    transform: translate(280px,140px);
+    background-color:blueviolet;
+}
+.big_bars.big_x1.big_y3{
+    transform: translate(0,280px);
+    background-color:darkred;
+}
+.big_bars.big_x2.big_y3 {
+    transform: translate(140px,280px);
+    background-color:dodgerblue;
+}
+.big_bars.big_x3.big_y3 {
+    transform: translate(280px,280px);
+    background-color:deeppink;
+}
+
+.big_toggled .big_bars.big_x1.big_y1{
+    transform: translate(-100px,-100px);
+}
+.big_toggled .big_bars.big_x2.big_y1 {
+    transform: translate(140px,-100px);
+}
+.big_toggled .big_bars.big_x3.big_y1 {
+    transform: translate(380px,-100px);
+}
+.big_toggled .big_bars.big_x1.big_y2{
+    transform: translate(-100px,140px);
+}
+.big_toggled .big_bars.big_x2.big_y2 {
+    transform: translate(140px,140px);
+}
+.big_toggled .big_bars.big_x3.big_y2 {
+    transform: translate(380px,140px);
+}
+.big_toggled .big_bars.big_x1.big_y3{
+    transform: translate(-100px,380px);
+}
+.big_toggled .big_bars.big_x2.big_y3 {
+    transform: translate(140px,380px);
+}
+.big_toggled .big_bars.big_x3.big_y3 {
+    transform: translate(380px,380px);
+}
 
 .background_toggled {
     height:100%;
@@ -861,53 +856,53 @@ TABS
             Lay out van grote menu
 -------------------------------------
 */
-        
-        .big_bars_container a {
-        color:white;
-        font-size: 20px;
-        text-decoration:none;
-        text-transform:uppercase;
-        text-align:center;
-        font-family:"Open Sans", sans-serif;
-        width:120px;
-        height:120px;
-        }
-        
-        .big_bars_container a p {
-        text-align:center;
-        margin-bottom:0px;
-        margin-top:20px;
-   
-        }
 
-      
-        .effect img {
-            height:50px;
-            width:50px;
-            margin-top:30px;
-            transition-delay: 0.5s;
-            transition-duration:0.3s;
-            position:relative;
-            overflow:hidden;
-        }
-    
-        
-      
-        
-    .effect .bartext {
-        font-size: 10px;
-        color:white;
-        font-family:sans-serif;
-        font-style: none;
-        overflow:hidden;
-        transition-delay:0.3s;
-        transition-duration:0.3s;
-        display:block;
-        margin-top:20px;
-        position:relative;
-        opacity:0;
-        text-shadow: 1px 1px 1px black;
-    }
+.big_bars_container a {
+    color:white;
+    font-size: 20px;
+    text-decoration:none;
+    text-transform:uppercase;
+    text-align:center;
+    font-family:"Open Sans", sans-serif;
+    width:120px;
+    height:120px;
+}
+
+.big_bars_container a p {
+    text-align:center;
+    margin-bottom:0px;
+    margin-top:20px;
+
+}
+
+
+.effect img {
+    height:50px;
+    width:50px;
+    margin-top:30px;
+    transition-delay: 0.5s;
+    transition-duration:0.3s;
+    position:relative;
+    overflow:hidden;
+}
+
+
+
+
+.effect .bartext {
+    font-size: 10px;
+    color:white;
+    font-family:sans-serif;
+    font-style: none;
+    overflow:hidden;
+    transition-delay:0.3s;
+    transition-duration:0.3s;
+    display:block;
+    margin-top:20px;
+    position:relative;
+    opacity:0;
+    text-shadow: 1px 1px 1px black;
+}
 
 #bar1 {
     box-shadow:5px 5px 10px #999;
@@ -940,22 +935,22 @@ TABS
     opacity:0;
 }
 
-        
+
  /*
 ------------------------------------
         Effecten (hovers) van Grote Menu
 ------------------------------------
 */
 
-  
+
 
 
 .big_bars:hover {
-            box-shadow:5px 5px 10px #999;
-            opacity:1;
+    box-shadow:5px 5px 10px #999;
+    opacity:1;
     
-        }
-  
+}
+
 
 
 
@@ -985,50 +980,45 @@ TABS
     box-shadow: 8px 8px 5px #999;
     
 }
-        
-        
-       #bar1:hover .bartext {
-            margin-top:10px;
-            opacity:1;
-        }
-       #bar2:hover .bartext {
-            margin-top:10px;
-            opacity:1;
-        }
-       #bar3:hover .bartext {
-            margin-top:10px;
-            opacity:1;
-        }
-       #bar4:hover .bartext {
-            margin-top:10px;
-            opacity:1;
-        }
-       #bar5:hover .bartext {
-            margin-top:10px;
-            opacity:1;
-        }
-       #bar6:hover .bartext {
-            margin-top:10px;
-            opacity:1;
-        }
-       #bar7:hover .bartext {
-            margin-top:10px;
-            opacity:1;
-        }
-       #bar8:hover .bartext {
-            margin-top:10px;
-            opacity:1;
-        }
-      #bar9:hover .bartext {
-            margin-top:10px;
-            opacity:1;
-        }
-
-     
- 
 
 
-        
+#bar1:hover .bartext {
+    margin-top:10px;
+    opacity:1;
+}
+#bar2:hover .bartext {
+    margin-top:10px;
+    opacity:1;
+}
+#bar3:hover .bartext {
+    margin-top:10px;
+    opacity:1;
+}
+#bar4:hover .bartext {
+    margin-top:10px;
+    opacity:1;
+}
+#bar5:hover .bartext {
+    margin-top:10px;
+    opacity:1;
+}
+#bar6:hover .bartext {
+    margin-top:10px;
+    opacity:1;
+}
+#bar7:hover .bartext {
+    margin-top:10px;
+    opacity:1;
+}
+#bar8:hover .bartext {
+    margin-top:10px;
+    opacity:1;
+}
+#bar9:hover .bartext {
+    margin-top:10px;
+    opacity:1;
+}
+
 /* 
 --------------------------------------------------------
           
@@ -1036,162 +1026,159 @@ TABS
 
 --------------------------------------------------------
 */
-   
 
-        .pbars_container {
-            position: absolute;
-            top:330px;
-            left: 110px;
-            width: 195px;
-            height: 195px;
-            cursor:pointer;
-            z-index:1501;
-        }
+.pbars_container {
+    position: absolute;
+    top:330px;
+    left: 110px;
+    width: 195px;
+    height: 195px;
+    cursor:pointer;
+    z-index:1501;
+}
 
 .pbars_containerlight {
     opacity:.2;
     z-index:500;
 }
 
-        .pbars {
-            transition: transform 0.4s linear, opacity 0.3s linear;
-            
-            background-color: black;
-            width: 60px;
-            height: 60px;
-            position: absolute;
-            border-radius:10px;
-            border:1px solid white;
-            box-shadow:3px 3px 5px dimgrey;
-            opacity:0.6;
-        }
-        
-        .ptoggled .pbars {
-            transition: transform 0.4s linear, opacity 0.3s linear;
-            opacity:0;
-            
-        }
-        .pbars.px1.py1{
-            transform: translate(0,0);
-            background-color:darkorange;
-        }
-        .pbars.px2.py1 {
-            transform: translate(65px,0);
-            background-color:forestgreen;
-        }
-        .pbars.px3.py1 {
-            transform: translate(130px,0);
-            background-color:orane;
-        }
-        .pbars.px1.py2{
-            transform: translate(0,65px);
-            background-color:red;
-        }
-        .pbars.px2.py2 {
-            transform: translate(65px,65px);
-            background-color:blue;
-        }
-        .pbars.px3.py2 {
-            transform: translate(130px,65px);
-            background-color:blueviolet;
-        }
-        .pbars.px1.py3{
-            transform: translate(0,130px);
-            background-color:darkred;
-        }
-        .pbars.px2.py3 {
-            transform: translate(65px,130px);
-            background-color:dodgerblue;
-        }
-        .pbars.px3.py3 {
-            transform: translate(130px,130px);
-            background-color:deeppink;
-        }
-        
-        .ptoggled .pbars.px1.py1{
-            transform: translate(-65px,-65px);
-        }
-        .ptoggled .pbars.px2.py1 {
-            transform: translate(65px,-65px);
-        }
-        .ptoggled .pbars.px3.py1 {
-            transform: translate(195px,-65px);
-        }
-        .ptoggled .pbars.px1.py2{
-            transform: translate(-65px,65px);
-        }
-        .ptoggled .pbars.px2.py2 {
-            transform: translate(65px,65px);
-        }
-        .ptoggled .pbars.px3.py2 {
-            transform: translate(195px,65px);
-        }
-        .ptoggled .pbars.px1.py3{
-            transform: translate(-65px,195px);
-        }
-        .ptoggled .pbars.px2.py3 {
-            transform: translate(65px,195px);
-        }
-        .ptoggled .pbars.px3.py3 {
-            transform: translate(195px,195px);
-        }
-        
+.pbars {
+    transition: transform 0.4s linear, opacity 0.3s linear;
 
- .littlebars_container {
-            position: absolute;
-            top:208px;
-            left: 90px;
-            width: 15px;
-            height: 15px;
-            cursor:pointer;
-            padding-top:10px;
-            z-index:1501;
-        }
+    background-color: black;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    border-radius:10px;
+    border:1px solid white;
+    box-shadow:3px 3px 5px dimgrey;
+    opacity:0.6;
+}
+
+.ptoggled .pbars {
+    transition: transform 0.4s linear, opacity 0.3s linear;
+    opacity:0;
+
+}
+.pbars.px1.py1{
+    transform: translate(0,0);
+    background-color:darkorange;
+}
+.pbars.px2.py1 {
+    transform: translate(65px,0);
+    background-color:forestgreen;
+}
+.pbars.px3.py1 {
+    transform: translate(130px,0);
+    background-color:orane;
+}
+.pbars.px1.py2{
+    transform: translate(0,65px);
+    background-color:red;
+}
+.pbars.px2.py2 {
+    transform: translate(65px,65px);
+    background-color:blue;
+}
+.pbars.px3.py2 {
+    transform: translate(130px,65px);
+    background-color:blueviolet;
+}
+.pbars.px1.py3{
+    transform: translate(0,130px);
+    background-color:darkred;
+}
+.pbars.px2.py3 {
+    transform: translate(65px,130px);
+    background-color:dodgerblue;
+}
+.pbars.px3.py3 {
+    transform: translate(130px,130px);
+    background-color:deeppink;
+}
+
+.ptoggled .pbars.px1.py1{
+    transform: translate(-65px,-65px);
+}
+.ptoggled .pbars.px2.py1 {
+    transform: translate(65px,-65px);
+}
+.ptoggled .pbars.px3.py1 {
+    transform: translate(195px,-65px);
+}
+.ptoggled .pbars.px1.py2{
+    transform: translate(-65px,65px);
+}
+.ptoggled .pbars.px2.py2 {
+    transform: translate(65px,65px);
+}
+.ptoggled .pbars.px3.py2 {
+    transform: translate(195px,65px);
+}
+.ptoggled .pbars.px1.py3{
+    transform: translate(-65px,195px);
+}
+.ptoggled .pbars.px2.py3 {
+    transform: translate(65px,195px);
+}
+.ptoggled .pbars.px3.py3 {
+    transform: translate(195px,195px);
+}
+
+
+.littlebars_container {
+    position: absolute;
+    top:208px;
+    left: 90px;
+    width: 15px;
+    height: 15px;
+    cursor:pointer;
+    padding-top:10px;
+    z-index:1501;
+}
 
 .littlebars_containerlight {
     opacity:.2;
     z-index:500;
 }
-        
-        .littlebars {
-            /* blue blocks */
-            transition: transform 0.2s linear, background-color 0.2s linear;
-            background-color: blueviolet;
-            width: 4px;
-            height: 4px;
-            position: absolute;
-        }
 
+.littlebars {
+    /* blue blocks */
+    transition: transform 0.2s linear, background-color 0.2s linear;
+    background-color: blueviolet;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+}
 
-        }
-        .littlebars.lx1.ly1{
-            transform: translate(0,0);
-        }
-        .littlebars.lx2.ly1 {
-            transform: translate(5px,0);
-        }
-        .littlebars.lx3.ly1 {
-            transform: translate(10px,0);
-        }
-        .littlebars.lx1.ly2{
-            transform: translate(0,5px);
-        }
-        .littlebars.lx2.ly2 {
-            transform: translate(5px,5px);
-        }
-        .littlebars.lx3.ly2 {
-            transform: translate(10px,5px);
-        }
-        .littlebars.lx1.ly3{
-            transform: translate(0,10px);
-        }
-        .littlebars.lx2.ly3 {
-            transform: translate(5px,10px);
-        }
-        .littlebars.lx3.ly3 {
-            transform: translate(10px,10px);
-        }
-        
+.littlebars.lx1.ly1{
+    transform: translate(0,0);
+}
+.littlebars.lx2.ly1 {
+    transform: translate(5px,0);
+}
+.littlebars.lx3.ly1 {
+    transform: translate(10px,0);
+}
+.littlebars.lx1.ly2{
+    transform: translate(0,5px);
+}
+.littlebars.lx2.ly2 {
+    transform: translate(5px,5px);
+}
+.littlebars.lx3.ly2 {
+    transform: translate(10px,5px);
+}
+.littlebars.lx1.ly3{
+    transform: translate(0,10px);
+}
+.littlebars.lx2.ly3 {
+    transform: translate(5px,10px);
+}
+.littlebars.lx3.ly3 {
+    transform: translate(10px,10px);
+}
+
 /* 
 --------------------------------------------------------
           
@@ -1199,17 +1186,17 @@ TABS
 
 --------------------------------------------------------
 */
-   
-   .beforemenu {
-       opacity:1;
-       background-color:black;
-       height:100%;
-       width:100%;
-       z-index:1500;
-       position: absolute;
-       transition: opacity 2s linear;
-       transition-delay:1s;
-   } 
+
+.beforemenu {
+   opacity:1;
+   background-color:black;
+   height:100%;
+   width:100%;
+   z-index:1500;
+   position: absolute;
+   transition: opacity 2s linear;
+   transition-delay:1s;
+} 
 
 .beforemenu_toggled {
     opacity:0;
@@ -1221,129 +1208,124 @@ TABS
 
 }
 
-  .beforemenuOut {
-       background-color:black;
-       height:100%;
-       width:100%;
-       z-index:1500;
-       position: absolute;
-       transition: opacity 2s linear;
-       transition-delay:1s;
-  }
-        
-    .phoneframe {
-        left:50%;
-        top:50%;
-        margin-left:-154px;
-        margin-top:-325px;
-        z-index:2000;
-        position:absolute;
-        
-    }
+.beforemenuOut {
+   background-color:black;
+   height:100%;
+   width:100%;
+   z-index:1500;
+   position: absolute;
+   transition: opacity 2s linear;
+   transition-delay:1s;
+}
+
+.phoneframe {
+    left:50%;
+    top:50%;
+    margin-left:-154px;
+    margin-top:-325px;
+    z-index:2000;
+    position:absolute;
+
+}
 
 .phoneframe img {
     height:651px;
     width:308px;
 }
-    
-    .redbutton {
-        position:absolute;
-        top:50%;
-        left:50%;
-        margin-left:-30px;
-        margin-top:250px;
-        height:60px;
-        width:60px;
-        background-color:red;
-        z-index:2001;
-        border-radius:50%;
-        cursor:pointer;
-    }
-    
-        .greenbutton {
-        position:absolute;
-        top:425px;
-        left:205px;
-        height:60px;
-        width:60px;
-        background-color:limegreen;
-        z-index:2001;
-        border-radius:50%;
-        cursor:pointer;
-    }
-    
-        .greenbutton_hp2 {
-        position:absolute;
-        top:675px;
-        left:175px;
-        height:60px;
-        width:60px;
-        background-color:limegreen;
-        z-index:2001;
-        border-radius:50%;
-        cursor:pointer;
-    }
 
- .redbutton_hp2 {
-        position:relative;
-        top:675px;
-        left:175px;
-        height:60px;
-        width:60px;
-        background-color:red;
-        z-index:2001;
-        border-radius:50%;
-        cursor:pointer;
-    }
+.redbutton {
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-30px;
+    margin-top:250px;
+    height:60px;
+    width:60px;
+    background-color:red;
+    z-index:2001;
+    border-radius:50%;
+    cursor:pointer;
+}
 
-   
-    
+.greenbutton {
+    position:absolute;
+    top:425px;
+    left:205px;
+    height:60px;
+    width:60px;
+    background-color:limegreen;
+    z-index:2001;
+    border-radius:50%;
+    cursor:pointer;
+}
 
+.greenbutton_hp2 {
+    position:absolute;
+    top:675px;
+    left:175px;
+    height:60px;
+    width:60px;
+    background-color:limegreen;
+    z-index:2001;
+    border-radius:50%;
+    cursor:pointer;
+}
 
+.redbutton_hp2 {
+    position:relative;
+    top:675px;
+    left:175px;
+    height:60px;
+    width:60px;
+    background-color:red;
+    z-index:2001;
+    border-radius:50%;
+    cursor:pointer;
+}
 
 .phonescreen_off {
-       position:absolute;
-        top:187px;
-        left:70px;
-        z-index:-1;
-        height:475px;
-        width:273px;
-        background-color:black;
-    opacity:0.5;
-    border-radius:5px;
+   position:absolute;
+   top:187px;
+   left:70px;
+   z-index:-1;
+   height:475px;
+   width:273px;
+   background-color:black;
+   opacity:0.5;
+   border-radius:5px;
 }
 
 .phonescreen_on {
-        position:absolute;
-        top:187px;
-        left:70px;
-        z-index:-1000;
-        height:475px;
-        width:273px;
-        background-color:white;
+    position:absolute;
+    top:187px;
+    left:70px;
+    z-index:-1000;
+    height:475px;
+    width:273px;
+    background-color:white;
     opacity:0.5;
     border-radius:5px;
-       
+
 }
-             
+
 /*
 --------------------------------------------------------
             Handige (?) functies
 --------------------------------------------------------
 */
 
-        .hide {
-            transition-delay:0.2s;
-            transition: transform 0.2s linear visibility 0.2 linear display 0.2 linear;
-            transition-duration: 0.2s;
-        }
-        
-        .show {
-            transition-delay:3s;
-            transition-duration:2s;
-            transition-property: visibility visible;
-        }
-        
+.hide {
+    transition-delay:0.2s;
+    transition: transform 0.2s linear visibility 0.2 linear display 0.2 linear;
+    transition-duration: 0.2s;
+}
+
+.show {
+    transition-delay:3s;
+    transition-duration:2s;
+    transition-property: visibility visible;
+}
+
 
 .not_active {
    pointer-events: none;
@@ -1402,8 +1384,6 @@ TABS
     top:20px;
     z-index:1;
 }
-    
-
 
 .topbar {
     width:auto;
@@ -1426,9 +1406,7 @@ a.topbar {
     font-weight:bold;
     margin-top:15px;
     margin-bottom:15px;
-        
 }
-
 
 .contenthomepage {
     width:50%;
