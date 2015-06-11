@@ -17,31 +17,50 @@ button {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js" type="text/javascript"></script>
 <script src="https://cdn.firebase.com/js/client/2.2.6/firebase.js" type="text/javascript"></script>
 <script src="js/poll.js" type="text/javascript"></script>
-<div class="pagedown">
+<%
+  var poll = [
+      {
+        id: 'test',
+        question: 'Bent U het eens met deze stelling',
+        answers: [ 'Ja', 'Nee' ]
+      },
+      {
+        id: 'sex',
+        question: 'Ben je een man of vrouw?',
+        answers: [ 'Man','Vrouw', 'Ik laat me niet indelen']
+      },
+      {
+        id: 'code',
+        question: 'Wie is je favoriete programmeur?',
+        answers: [ 'Mark','Kirsten', 'Edward Snowden']
+      }
+  ];
+
+%>
+<div class="filler">
+</div>
     <div class="poll">
-      <div class="title">Bent U het eens met deze stelling?</div>
-      <button question="test" value="ja">Ja</button>
-      <button question="test" value="nee">Nee</button>
-
-      <div class="title">Ben je een man of vrouw?</div>
-      <button question="sex" value="m">Man</button>
-      <button question="sex" value="f">Vrouw</button>
-      <button question="sex" value="?">Ik laat me niet indelen</button>
-
+      <!-- teken alle vragen -->
+      <% poll.forEach(function(item){ %>
+        <div class="title"><%= item.question %></div>
+        <% item.answers.forEach(function(answer){ %>
+          <button question="<%= item.id %>" value="<%= answer %>"><%= answer %></button>
+        <% }) %>
+      <% }) %>
       <hr/>
       <button class="result-button">Klaar</button>
     </div>
     <div class="result" style="display:none;">
       <h3><span value="count"></span> resultaten:</h3>
-      <div>Ja: <span value="ja">0</span></div>
-      <div>Nee: <span value="nee">0</span></div>
-      <hr/>
-      <div>Mannen: <span value="m">0</span></div>
-      <div>Vrouwen: <span value="f">0</span></div>
-      <div>Onwetenden: <span value="?">0</span></div>
-      <hr/>
-      
-      <div id="test-chart" class="chart"></div>
-      <div id="sex-chart" class="chart"></div>
+
+      <!-- teken alle resultaten -->
+      <% poll.forEach(function(item){ %>
+        <div class="title"><%= item.question %></div>
+        <ul>
+        <% item.answers.forEach(function(answer){ %>
+          <li><%= answer %>: <span question="<%= item.id %>" value="<%= answer %>"></span></li>
+        <% }) %>
+        </ul>
+        <div id="<%= item.id %>-chart" class="chart"></div>
+      <% }) %>
     </div>
-</div>

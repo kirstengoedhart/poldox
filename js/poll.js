@@ -7,7 +7,7 @@ $(function() {
 
   // Firebase 
   var results = {};       // store results
-  var url = 'https://poldox.firebaseio.com/poll';
+  var url = 'https://poldox.firebaseio.com/poll2';
   var allAnswersRef = new Firebase(url);
   var myAnswerRef = initMyAnswerRef();
   
@@ -45,6 +45,8 @@ $(function() {
   allAnswersRef.on('value', function(snapshot) {
     // get data from firebase
     var allAnswers = snapshot.val();
+    if(!allAnswers) return; // abort when no data yet...
+
     // will store results in "results" variable 
     calculateResults(allAnswers);
     // will update HTML
@@ -68,7 +70,7 @@ $(function() {
     $.each(results, function(question, answers) {
       updateChart(question,answers);
       $.each(answers,function(value,count){
-        $('span[value="' + value + '"]').text(count);
+        $('span[value="' + value + '"][question="'+question+'"]').text(count);
       });
     });
   }
@@ -131,6 +133,7 @@ $(function() {
       
       // count number of responses
       results.responses.count++;
+      console.log('results are:',results);
     });
   }
   /*******************************************************

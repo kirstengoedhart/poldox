@@ -89,6 +89,7 @@ $(document).ready(function(){
 
         // Show Intro Screen
         if(state.intro){
+            $intro_phone.show();
             $body.addClass('intro');
             $intro.removeClass('beforemenu_toggled');
 
@@ -101,10 +102,15 @@ $(document).ready(function(){
         // POWER UP
         if(state.power){
             $left_phone.addClass('left-phone-on');
+            $intro.addClass('beforemenu_toggled');
         
         // POWER DOWN
         } else {
             $left_phone.removeClass('left-phone-on');
+            if(!state.intro){
+                $intro_phone.hide();
+            }
+            $intro.removeClass('beforemenu_toggled');
         }
 
         // Show left phone
@@ -114,6 +120,8 @@ $(document).ready(function(){
         } else {
             $left_phone.removeClass('show-left-phone');
         }
+
+
     }
 
     // Initialize layout with current state
