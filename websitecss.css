@@ -377,7 +377,7 @@ WEBSITE EXTRA's
     width:280px;
     top:50px;
     position:relative;
-    overflow:hidden;
+    overflow:hidden;re
 }
 
 .play.pextra {
@@ -394,7 +394,7 @@ WEBSITE EXTRA's
     overflow:hidden;
     height:25px;
     width:25px;
-    margin-left:4px;
+    margin-left:5px;
     margin-top:3px;
 }
 
@@ -407,7 +407,7 @@ WEBSITE EXTRA's
     background-color:white;
 }
 
-.subcontainer.pextra:hover ~ pextra {
+.subcontainer.pextra:hover .play {
     background-color:orange;
 }
 
@@ -444,7 +444,22 @@ body.pextra, body.pdata, body.pgeschiedenis, body.pdocumentaire, body.ptheorie, 
     border-color:#B82593}
 .bars.phomepage {border-color:#B84A00;}
 
-  
+
+.lightup.pextra:hover {color:purple;}
+
+.lightup.pdata:hover {color:blue;}
+
+.lightup.pgeschiedenis:hover {color:green;}
+
+.lightup.pdocumentaire:hover {color:#990000;}
+
+.lightup.ptheorie:hover {color:#B20000;}
+
+.lightup.pcontact:hover {color:#B82593;}
+
+.lightup.phomepage:hover {color:darkorange;}
+
+
 /* 
 
 --------------------------
@@ -1265,8 +1280,8 @@ TABS
 
  .redbutton_hp2 {
         position:relative;
-        top:685px;
-        left:180px;
+        top:675px;
+        left:175px;
         height:60px;
         width:60px;
         background-color:red;
@@ -1376,7 +1391,7 @@ TABS
 .phonebar_container {
     width:100%;
     position:fixed;
-    padding-left:100px;
+    padding-left:50px;
     overflow:hidden;
     top:20px;
     z-index:1;
@@ -1385,8 +1400,7 @@ TABS
 
 
 .topbar {
-    opacity:0.6;
-    width:100px;
+    width:150px;
     display:inline-block;
     overflow:hidden;
 }
@@ -1394,47 +1408,18 @@ TABS
 .topbar p {
     font-size: 15px;
     text-decoration:none;
-        font-family:"Open Sans", sans-serif;
-        color:black;
-        font-style: none;
-        transition-delay:0.3s;
-        transition-duration:0.3s;
-        text-shadow: 1px 1px 1px black;
+    font-family:"Open Sans", sans-serif;
+    color:dimgrey;
+    font-style: none;
+    transition-delay:0.3s;
+    transition-duration:0.3s;
     text-align: center;
     position:relative;
     overflow:hidden;
+    font-weight:bold;
         
 }
 
-
-#topbar2 {
-  
-}
-#topbar3 {
-
-}
-#topbar4 {
-
-}
-#topbar5 {
-
-}
-#topbar6 {
-
-}
-#topbar7 {
-
-}
-#topbar8 {
-  
-}
-#topbar9 {
-
-}
-
-.topbar:hover {
-    opacity:1;
-}
 
 .contenthomepage {
     width:50%;
